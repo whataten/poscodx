@@ -7,6 +7,7 @@
   <modules>
   	<module>practice01</module>
     <module>practice02</module>
+    <module>chapter03</module>
   </modules>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
