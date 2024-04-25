@@ -8,8 +8,18 @@ public class Goods {
     private int countSold;
 
     public Goods() {
+        this("name", 0, 0, 0);
+    }
+
+    public Goods(String name, int price, int countStock, int countSold) {
         // 클래스 이름 생략
         countofGoods++;
+
+        // 인스턴스 변수 초기화
+        this.name = name;
+        this.price = price;
+        this.countStock = countStock;
+        this.countSold = countSold;
     }
 
     public String getName() {
