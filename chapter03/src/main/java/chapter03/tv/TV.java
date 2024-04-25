@@ -22,9 +22,9 @@ public class TV {
 
     public void channel(int select) {
         if (select > 255) {
-            this.channel = 255;
-        } else if (select < 1) {
             this.channel = 1;
+        } else if (select < 1) {
+            this.channel = 255;
         } else {
             this.channel = select;
         }
@@ -38,7 +38,7 @@ public class TV {
                 this.channel += 1;
             }
         } else {
-            if (this.channel == 1) {
+            if (this.channel == 0) {
                 this.channel = 255;
             } else {
                 this.channel -= 1;
@@ -48,11 +48,11 @@ public class TV {
 
     public void volume(int select) {
         if (select > 100) {
-            this.channel = 100;
+            this.volume = 0;
         } else if (select < 1) {
-            this.channel = 1;
+            this.volume = 100;
         } else {
-            this.channel = select;
+            this.volume = select;
         }
     }
 
