@@ -1,4 +1,4 @@
-package paint;
+package com.poscodx.paint.point;
 
 public class MyColorPoint extends ColorPoint {
     public MyColorPoint(int x, int y, String asdf) {
