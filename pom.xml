@@ -10,6 +10,8 @@
     <module>chapter03</module>
     <module>practice03</module>
     <module>practice04</module>
+    <module>practice05</module>
+
   </modules>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
