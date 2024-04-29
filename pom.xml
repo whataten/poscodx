@@ -11,7 +11,7 @@
     <module>practice03</module>
     <module>practice04</module>
     <module>practice05</module>
-
+    <module>designpattern-practice</module>
   </modules>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
