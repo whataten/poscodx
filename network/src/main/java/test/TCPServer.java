@@ -51,10 +51,18 @@ public class TCPServer {
                     // 6. 데이터 쓰기
                     os.write(data.getBytes("utf-8"));
 
+                    try {
+                        Thread.sleep(3000);
+                    } catch (Exception e) {
+                        // TODO: handle exception
+                    }
+
+                    os.write(data.getBytes("utf-8"));
 
                 }
             } catch (SocketException e) {
-                System.out.println("[server] suddenly closed by client");
+                System.out.println("[server] SocketException:" + e);
+                System.out.println("socket is closed? : " + socket.isClosed());
             } catch (IOException e) {
                 System.out.println("[server] error: " + e);
             }
@@ -71,14 +79,14 @@ public class TCPServer {
         } catch (IOException e) {
             System.out.println("[server] error: " + e);
         } finally {
-            try {
-                if (serverSocket != null && !serverSocket.isClosed()) {
-                    serverSocket.close();
-                }
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            // try {
+            //     if (serverSocket != null && !serverSocket.isClosed()) {
+            //         serverSocket.close();
+            //     }
+            // } catch (IOException e) {
+            //     e.printStackTrace();
+            // }
+            System.out.println("socket is closed really? : " + serverSocket.isClosed());
         }
     }
 }

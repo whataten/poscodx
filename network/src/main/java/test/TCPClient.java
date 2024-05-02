@@ -42,18 +42,19 @@ public class TCPClient {
             System.out.println("[client] received: " + data);
 
         } catch (SocketException e) {
-            System.out.println("[client] error: " + e);
-        } catch (IOException e ) {
             System.out.println("[client] suddenly closed by server");
-        }finally {
+            System.out.println("socket is closed? : " + socket.isClosed());
+        } catch (IOException e ) {
+            System.out.println("[client] error: " + e);
+        } finally {
             try {
-                if(socket != null && !socket.isClosed()){
+                if (socket != null && !socket.isClosed()) {
                     socket.close();
                 }
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            System.out.println("socket is closed really? : " + socket.isClosed());
         }
     }
 }

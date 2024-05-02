@@ -22,67 +22,23 @@ public class EchoServer {
             serverSocket = new ServerSocket();
 
             serverSocket.bind(new InetSocketAddress("0.0.0.0", SERVER_PORT), 10);
-
-            var socket = serverSocket.accept();
-
-            try {
-                var inetRemoteSocketAddress = (InetSocketAddress) socket.getRemoteSocketAddress();
-                String remoteHostAddress = inetRemoteSocketAddress.getAddress().getHostAddress();
-                int remotePort = inetRemoteSocketAddress.getPort();
-                log("connected by client[" + remoteHostAddress + ":" + remotePort + "]");
-
-                InputStream is = socket.getInputStream();
-                OutputStream os = socket.getOutputStream();
-
-                // socket close 하면 자동으로 다 닫힘
-                PrintWriter pw = new PrintWriter(new OutputStreamWriter(os, "utf-8"), true);
-                BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
-
-                while (true) {
-                    String data = br.readLine(); // blocking
-
-                    if (data == null) {
-                        log("closed by client");
-                        break;
-                    }
-
-                    log("received: " + data);
-
-                    pw.println(data);
-
-                    // outputstreamwriter가 대신해줌
-                    // os.write(data.getBytes("utf-8"));
-
-                }
-            } catch (SocketException e) {
-                log("suddenly closed by client");
-            } catch (IOException e) {
-                log("error: " + e);
-            } finally {
-                try {
-                    if (socket != null && !socket.isClosed()) {
-                        socket.close();
-                    }
-                } catch (Exception e) {
-                    log("error: " + e);
-                }
+            while(true) {
+                var socket = serverSocket.accept();
+                new EchoRequestHandler(socket).start();
             }
-
-        } catch (IOException e) {
-            log("error: " + e);
+        } catch(Exception e) {
+            e.printStackTrace();
         } finally {
             try {
-                if (serverSocket != null && !serverSocket.isClosed()) {
-                    serverSocket.close();
-                }
+                serverSocket.close();
             } catch (IOException e) {
-
+                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
     }
 
-    private static void log(String message) {
+    public static void log(String message) {
         System.out.println("[Echo Server] : " + message);
     }
 }
