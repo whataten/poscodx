@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
-// import java.util.Base64;
+import java.util.Base64;
 import java.util.List;
 
 public class ChatServerThread extends Thread {
@@ -36,14 +36,12 @@ public class ChatServerThread extends Thread {
 
                 String statement = switch (datas[0]) {
                     case "JOIN":
-                        // this.nickName = new String(Base64.getDecoder().decode(datas[1]));
-                        this.nickName = datas[1];
+                        this.nickName = decoding(datas[1]);
                         this.printWriters.add(this.printWriter);
                         yield (nickName + "님이 입장하였습니다.");
 
                     case "MSG":
-                        // yield (nickName + " : " + new String(Base64.getDecoder().decode(datas[1])));
-                        yield (nickName + " : " + datas[1]);
+                        yield (nickName + " : " + decoding(datas[1]));
 
                     case "QUIT":
                         quit = true;
@@ -66,5 +64,9 @@ public class ChatServerThread extends Thread {
         for (var printWriter : printWriters) {
             printWriter.println(statement);
         }
+    }
+
+    private String decoding(String str) {
+        return new String(Base64.getDecoder().decode(str));
     }
 }
