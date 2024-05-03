@@ -20,7 +20,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-// import java.util.Base64;
+import java.util.Base64;
 
 public class ChatWindow {
 
@@ -101,7 +101,7 @@ public class ChatWindow {
 		frame.pack();
 
 		this.chatClientThread.start();
-		pw.println("JOIN:" + this.name);
+		pw.println("JOIN:" + encoding(this.name));
 	}
 
 	private void sendMessage() {
@@ -110,18 +110,22 @@ public class ChatWindow {
 		if ("".equals(message)) {
 			return;
 		} else if ("quit".equals(message.toLowerCase())) {
-			pw.println("QUIT:" + message);
+			pw.println("QUIT:");
 			finish();
 		} else {
-			pw.println("MSG:" + message);
+			pw.println("MSG:" + encoding(message));
 		}
 
 		textField.setText("");
 		textField.requestFocus();
 	}
 
-	private void updateTextArea(String message) {
-		textArea.append(message);
+	private void updateTextArea(String message, boolean isEncoded) {
+		if (isEncoded) {
+			textArea.append(decoding(message));
+		} else {
+			textArea.append(message);
+		}
 		textArea.append("\n");
 	}
 
@@ -140,8 +144,7 @@ public class ChatWindow {
 						break;
 					}
 					String data = br.readLine();
-					System.out.println(data);
-					updateTextArea(data);
+					updateTextArea(data, false);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -149,11 +152,11 @@ public class ChatWindow {
 		}
 	}
 
-	// private static String encoding(String str) {
-	// 	return Base64.getEncoder().encodeToString(str.getBytes());
-	// }
+	private static String encoding(String str) {
+		return Base64.getEncoder().encodeToString(str.getBytes());
+	}
 
-	// private static String decoding(String str) {
-	// 	return new String(Base64.getDecoder().decode(str));
-	// }
+	private static String decoding(String str) {
+		return new String(Base64.getDecoder().decode(str));
+	}
 }
