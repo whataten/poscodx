@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
+import java.net.SocketTimeoutException;
 
 public class TCPClient {
 
@@ -18,6 +19,25 @@ public class TCPClient {
         try {
             // 1. socket 생성
             socket = new Socket();
+
+            // 1-1. 소켓 버퍼 사이즈 확인
+            int rcvBufferSize = socket.getReceiveBufferSize();
+            int sndBufferSize = socket.getSendBufferSize();
+            System.out.println(rcvBufferSize + ":" + sndBufferSize);
+
+            // 1-2. 소켓 버퍼 사이즈 변경
+            socket.setReceiveBufferSize(1024 * 10);
+            socket.setSendBufferSize(1024 * 10);
+
+            rcvBufferSize = socket.getReceiveBufferSize();
+            sndBufferSize = socket.getSendBufferSize();
+            System.out.println(rcvBufferSize + ":" + sndBufferSize);
+
+            // 1-3. SO_NODELAY(Nagle Algorithm off)
+            socket.setTcpNoDelay(true);
+
+            // 1-4. SO_TIMEOUT
+            socket.setSoTimeout(2000);
 
             // 2. 서버 연결
             socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PORT));
@@ -44,6 +64,8 @@ public class TCPClient {
         } catch (SocketException e) {
             System.out.println("[client] suddenly closed by server");
             System.out.println("socket is closed? : " + socket.isClosed());
+        } catch (SocketTimeoutException e) {
+            System.out.println("Socket Time out");
         } catch (IOException e ) {
             System.out.println("[client] error: " + e);
         } finally {
