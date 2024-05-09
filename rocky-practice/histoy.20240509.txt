@@ -1,0 +1,1000 @@
+   64  2024-05-09_16:11:10 [CMD]:ls
+   65  2024-05-09_16:11:10 [CMD]:ls -l
+   66  2024-05-09_16:11:10 [CMD]:tar xvfz jdk-17.0.10_linux-x64_bin.tar.gz 
+   67  2024-05-09_16:11:10 [CMD]:yum install tar -y
+   68  2024-05-09_16:11:10 [CMD]:yum install gzip -y
+   69  2024-05-09_16:11:10 [CMD]:tar xvfz jdk-17.0.10_linux-x64_bin.tar.gz 
+   70  2024-05-09_16:11:10 [CMD]:ls -l
+   71  2024-05-09_16:11:10 [CMD]:cd /usr
+   72  2024-05-09_16:11:10 [CMD]:cd local
+   73  2024-05-09_16:11:10 [CMD]:ls
+   74  2024-05-09_16:11:10 [CMD]:mkdir poscodx
+   75  2024-05-09_16:11:10 [CMD]:ls -l
+   76  2024-05-09_16:11:10 [CMD]:cd poscodx/
+   77  2024-05-09_16:11:10 [CMD]:pwd
+   78  2024-05-09_16:11:10 [CMD]:mv /root/jdk-17.0.10 .
+   79  2024-05-09_16:11:10 [CMD]:ls
+   80  2024-05-09_16:11:10 [CMD]:ls -l
+   81  2024-05-09_16:11:10 [CMD]:cd
+   82  2024-05-09_16:11:10 [CMD]:pwd
+   83  2024-05-09_16:11:10 [CMD]:/usr/local/poscodx/jdk-17.0.10/bin/java --version
+   84  2024-05-09_16:11:10 [CMD]:java
+   85  2024-05-09_16:11:10 [CMD]:set
+   86  2024-05-09_16:11:10 [CMD]:echo $PATH
+   87  2024-05-09_16:11:10 [CMD]:yum install -y vi
+   88  2024-05-09_16:11:10 [CMD]:vi /etc/profile
+   89  2024-05-09_16:11:10 [CMD]:echo $PATH
+   90  2024-05-09_16:11:10 [CMD]:source /etc/profile
+   91  2024-05-09_16:11:10 [CMD]:echo $PATH
+   92  2024-05-09_16:11:10 [CMD]:java --version
+   93  2024-05-09_16:11:10 [CMD]:sync
+   94  2024-05-09_16:11:10 [CMD]:shutdown -h now
+   95  2024-05-09_16:11:10 [CMD]:yum repolist
+   96  2024-05-09_16:11:10 [CMD]:exit
+   97  2024-05-09_16:11:10 [CMD]:ifconfig -a
+   98  2024-05-09_16:11:10 [CMD]:exit
+   99  2024-05-09_16:11:10 [CMD]:su kickscar -
+  100  2024-05-09_16:11:10 [CMD]:exit
+  101  2024-05-09_16:11:10 [CMD]:pwd
+  102  2024-05-09_16:11:10 [CMD]:useradd user1
+  103  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  104  2024-05-09_16:11:10 [CMD]:cat /etc/group
+  105  2024-05-09_16:11:10 [CMD]:ls -l /home
+  106  2024-05-09_16:11:10 [CMD]:useradd -g users user2
+  107  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  108  2024-05-09_16:11:10 [CMD]:cat /etc/shadow
+  109  2024-05-09_16:11:10 [CMD]:cd /home/user1
+  110  2024-05-09_16:11:10 [CMD]:ls
+  111  2024-05-09_16:11:10 [CMD]:ls -a
+  112  2024-05-09_16:11:10 [CMD]:ls -al
+  113  2024-05-09_16:11:10 [CMD]:ls -l /etc/skel
+  114  2024-05-09_16:11:10 [CMD]:ls -la /etc/skel
+  115  2024-05-09_16:11:10 [CMD]:cd
+  116  2024-05-09_16:11:10 [CMD]:pwd
+  117  2024-05-09_16:11:10 [CMD]:ls -l
+  118  2024-05-09_16:11:10 [CMD]:pwd
+  119  2024-05-09_16:11:10 [CMD]:clear
+  120  2024-05-09_16:11:10 [CMD]:pwd
+  121  2024-05-09_16:11:10 [CMD]:useradd -M user3
+  122  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  123  2024-05-09_16:11:10 [CMD]:ls -l /home
+  124  2024-05-09_16:11:10 [CMD]:passwd
+  125  2024-05-09_16:11:10 [CMD]:passwd user1
+  126  2024-05-09_16:11:10 [CMD]:cat /etc/shadow
+  127  2024-05-09_16:11:10 [CMD]:userdel user1
+  128  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  129  2024-05-09_16:11:10 [CMD]:ls -l /home
+  130  2024-05-09_16:11:10 [CMD]:userdel -r user2
+  131  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  132  2024-05-09_16:11:10 [CMD]:ls -l /home
+  133  2024-05-09_16:11:10 [CMD]:clear
+  134  2024-05-09_16:11:10 [CMD]:groupadd group1
+  135  2024-05-09_16:11:10 [CMD]:cat /etc/group
+  136  2024-05-09_16:11:10 [CMD]:grepdel group1
+  137  2024-05-09_16:11:10 [CMD]:groupdel group1
+  138  2024-05-09_16:11:10 [CMD]:cat /etc/group
+  139  2024-05-09_16:11:10 [CMD]:groupdel user3
+  140  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  141  2024-05-09_16:11:10 [CMD]:userdel user3
+  142  2024-05-09_16:11:10 [CMD]:cat /etc/passwd
+  143  2024-05-09_16:11:10 [CMD]:cat /etc/group
+  144  2024-05-09_16:11:10 [CMD]:groups
+  145  2024-05-09_16:11:10 [CMD]:groups kickscar
+  146  2024-05-09_16:11:10 [CMD]:clear
+  147  2024-05-09_16:11:10 [CMD]:su -
+  148  2024-05-09_16:11:10 [CMD]:exit
+  149  2024-05-09_16:11:10 [CMD]:ls -la
+  150  2024-05-09_16:11:10 [CMD]:ls -lah
+  151  2024-05-09_16:11:10 [CMD]:ls -lahF
+  152  2024-05-09_16:11:10 [CMD]:ls -lahFR
+  153  2024-05-09_16:11:10 [CMD]:ls
+  154  2024-05-09_16:11:10 [CMD]:ls -a
+  155  2024-05-09_16:11:10 [CMD]:ls -la
+  156  2024-05-09_16:11:10 [CMD]:clear
+  157  2024-05-09_16:11:10 [CMD]:ll
+  158  2024-05-09_16:11:10 [CMD]:ls -l 
+  159  2024-05-09_16:11:10 [CMD]:ls -l
+  160  2024-05-09_16:11:10 [CMD]:ll
+  161  2024-05-09_16:11:10 [CMD]:ls -l
+  162  2024-05-09_16:11:10 [CMD]:alias
+  163  2024-05-09_16:11:10 [CMD]:ls -l
+  164  2024-05-09_16:11:10 [CMD]:ll /var/log
+  165  2024-05-09_16:11:10 [CMD]:cd
+  166  2024-05-09_16:11:10 [CMD]:ls -la
+  167  2024-05-09_16:11:10 [CMD]:clear
+  168  2024-05-09_16:11:10 [CMD]:pwd
+  169  2024-05-09_16:11:10 [CMD]:mkdir dir1
+  170  2024-05-09_16:11:10 [CMD]:ls -l
+  171  2024-05-09_16:11:10 [CMD]:mkdir dir2/subdir1
+  172  2024-05-09_16:11:10 [CMD]:mkdir -p dir2/subdir1
+  173  2024-05-09_16:11:10 [CMD]:ls -l
+  174  2024-05-09_16:11:10 [CMD]:ls -l dir2
+  175  2024-05-09_16:11:10 [CMD]:clear
+  176  2024-05-09_16:11:10 [CMD]:pwd
+  177  2024-05-09_16:11:10 [CMD]:ls -l
+  178  2024-05-09_16:11:10 [CMD]:ls -la dir1
+  179  2024-05-09_16:11:10 [CMD]:rmdir dir1
+  180  2024-05-09_16:11:10 [CMD]:ls -l
+  181  2024-05-09_16:11:10 [CMD]:rmdir dir2
+  182  2024-05-09_16:11:10 [CMD]:ls -l dir2
+  183  2024-05-09_16:11:10 [CMD]:rmdir dir2
+  184  2024-05-09_16:11:10 [CMD]:rmdir -p  dir2/subdir1
+  185  2024-05-09_16:11:10 [CMD]:ls -l
+  186  2024-05-09_16:11:10 [CMD]:clear
+  187  2024-05-09_16:11:10 [CMD]:cd ~
+  188  2024-05-09_16:11:10 [CMD]:cd
+  189  2024-05-09_16:11:10 [CMD]:cd /
+  190  2024-05-09_16:11:10 [CMD]:ls -l
+  191  2024-05-09_16:11:10 [CMD]:pwd
+  192  2024-05-09_16:11:10 [CMD]:clear
+  193  2024-05-09_16:11:10 [CMD]:pwd
+  194  2024-05-09_16:11:10 [CMD]:cd etc/systemd
+  195  2024-05-09_16:11:10 [CMD]:cd ~
+  196  2024-05-09_16:11:10 [CMD]:cd /etc/systemd
+  197  2024-05-09_16:11:10 [CMD]:cd ..
+  198  2024-05-09_16:11:10 [CMD]:pwd
+  199  2024-05-09_16:11:10 [CMD]:cd ..
+  200  2024-05-09_16:11:10 [CMD]:pwd
+  201  2024-05-09_16:11:10 [CMD]:cd ~kickscar
+  202  2024-05-09_16:11:10 [CMD]:pwd
+  203  2024-05-09_16:11:10 [CMD]:cd
+  204  2024-05-09_16:11:10 [CMD]:clear
+  205  2024-05-09_16:11:10 [CMD]:pwd
+  206  2024-05-09_16:11:10 [CMD]:ls -al
+  207  2024-05-09_16:11:10 [CMD]:mkdir test01
+  208  2024-05-09_16:11:10 [CMD]:ls
+  209  2024-05-09_16:11:10 [CMD]:cd /root/test01
+  210  2024-05-09_16:11:10 [CMD]:pwd
+  211  2024-05-09_16:11:10 [CMD]:mkdir test011
+  212  2024-05-09_16:11:10 [CMD]:ls
+  213  2024-05-09_16:11:10 [CMD]:mkdor test012
+  214  2024-05-09_16:11:10 [CMD]:mkdir test012
+  215  2024-05-09_16:11:10 [CMD]:ls
+  216  2024-05-09_16:11:10 [CMD]:pwd
+  217  2024-05-09_16:11:10 [CMD]:cd ~
+  218  2024-05-09_16:11:10 [CMD]:pwd
+  219  2024-05-09_16:11:10 [CMD]:ls
+  220  2024-05-09_16:11:10 [CMD]:mkdir test02/test021
+  221  2024-05-09_16:11:10 [CMD]:mkdir -p test02/test021
+  222  2024-05-09_16:11:10 [CMD]:ls
+  223  2024-05-09_16:11:10 [CMD]:ls test02
+  224  2024-05-09_16:11:10 [CMD]:mkdir test02/test022
+  225  2024-05-09_16:11:10 [CMD]:ls test02
+  226  2024-05-09_16:11:10 [CMD]:ls -l test02
+  227  2024-05-09_16:11:10 [CMD]:ls -la
+  228  2024-05-09_16:11:10 [CMD]:ls -a
+  229  2024-05-09_16:11:10 [CMD]:ls -la
+  230  2024-05-09_16:11:10 [CMD]:ls -l test02
+  231  2024-05-09_16:11:10 [CMD]:cd test02/test022
+  232  2024-05-09_16:11:10 [CMD]:pwd
+  233  2024-05-09_16:11:10 [CMD]:cd /root
+  234  2024-05-09_16:11:10 [CMD]:pwd
+  235  2024-05-09_16:11:10 [CMD]:ls -la
+  236  2024-05-09_16:11:10 [CMD]:cd test01
+  237  2024-05-09_16:11:10 [CMD]:ls -l
+  238  2024-05-09_16:11:10 [CMD]:rmdir test011
+  239  2024-05-09_16:11:10 [CMD]:rmdir test012
+  240  2024-05-09_16:11:10 [CMD]:cd ..
+  241  2024-05-09_16:11:10 [CMD]:rmdir test01
+  242  2024-05-09_16:11:10 [CMD]:ls -l
+  243  2024-05-09_16:11:10 [CMD]:rmdir /test02/test021
+  244  2024-05-09_16:11:10 [CMD]:ls test02
+  245  2024-05-09_16:11:10 [CMD]:rmdir test02/test021
+  246  2024-05-09_16:11:10 [CMD]:rmdir -p test02/test022
+  247  2024-05-09_16:11:10 [CMD]:ls -l
+  248  2024-05-09_16:11:10 [CMD]:clear
+  249  2024-05-09_16:11:10 [CMD]:pwd
+  250  2024-05-09_16:11:10 [CMD]:ls -l
+  251  2024-05-09_16:11:10 [CMD]:mkdir test01
+  252  2024-05-09_16:11:10 [CMD]:ls -l
+  253  2024-05-09_16:11:10 [CMD]:cd /dev
+  254  2024-05-09_16:11:10 [CMD]:pwd
+  255  2024-05-09_16:11:10 [CMD]:ls -l
+  256  2024-05-09_16:11:10 [CMD]:ls -la
+  257  2024-05-09_16:11:10 [CMD]:cd
+  258  2024-05-09_16:11:10 [CMD]:ls -la
+  259  2024-05-09_16:11:10 [CMD]:cat test.txt
+  260  2024-05-09_16:11:10 [CMD]:touch hello.txt
+  261  2024-05-09_16:11:10 [CMD]:ls -l
+  262  2024-05-09_16:11:10 [CMD]:touch test.txt 
+  263  2024-05-09_16:11:10 [CMD]:ls -l
+  264  2024-05-09_16:11:10 [CMD]:gcc
+  265  2024-05-09_16:11:10 [CMD]:pwd
+  266  2024-05-09_16:11:10 [CMD]:mkdir dowork
+  267  2024-05-09_16:11:10 [CMD]:cd dowork
+  268  2024-05-09_16:11:10 [CMD]:ls -l
+  269  2024-05-09_16:11:10 [CMD]:ls -a
+  270  2024-05-09_16:11:10 [CMD]:mkdir c
+  271  2024-05-09_16:11:10 [CMD]:ls -l
+  272  2024-05-09_16:11:10 [CMD]:cd c
+  273  2024-05-09_16:11:10 [CMD]:pwd
+  274  2024-05-09_16:11:10 [CMD]:vi helloworld.c
+  275  2024-05-09_16:11:10 [CMD]:cat helloworld.c 
+  276  2024-05-09_16:11:10 [CMD]:gcc -c helloworld.c
+  277  2024-05-09_16:11:10 [CMD]:ls -l
+  278  2024-05-09_16:11:10 [CMD]:gcc -o helloworld helloworld.o
+  279  2024-05-09_16:11:10 [CMD]:ls -l
+  280  2024-05-09_16:11:10 [CMD]:echo $PATH
+  281  2024-05-09_16:11:10 [CMD]:helloworld
+  282  2024-05-09_16:11:10 [CMD]:./helloworld 
+  283  2024-05-09_16:11:10 [CMD]:vi helloworld.c
+  284  2024-05-09_16:11:10 [CMD]:cat helloworld.c
+  285  2024-05-09_16:11:10 [CMD]:vi helloworld.h
+  286  2024-05-09_16:11:10 [CMD]:ls -l
+  287  2024-05-09_16:11:10 [CMD]:cat helloworld.c
+  288  2024-05-09_16:11:10 [CMD]:cat helloworld.h
+  289  2024-05-09_16:11:10 [CMD]:vi main.c
+  290  2024-05-09_16:11:10 [CMD]:ls -l
+  291  2024-05-09_16:11:10 [CMD]:gcc -c helloworld.c
+  292  2024-05-09_16:11:10 [CMD]:ls -l
+  293  2024-05-09_16:11:10 [CMD]:gcc -c main.c
+  294  2024-05-09_16:11:10 [CMD]:ls -l
+  295  2024-05-09_16:11:10 [CMD]:gcc -o helloworld helloworld.o main.o
+  296  2024-05-09_16:11:10 [CMD]:vi makefile
+  297  2024-05-09_16:11:10 [CMD]:make clean
+  298  2024-05-09_16:11:10 [CMD]:ls -l
+  299  2024-05-09_16:11:10 [CMD]:make
+  300  2024-05-09_16:11:10 [CMD]:ls -l
+  301  2024-05-09_16:11:10 [CMD]:./helloworld 
+  302  2024-05-09_16:11:10 [CMD]:vi helloworld.c
+  303  2024-05-09_16:11:10 [CMD]:ls -l
+  304  2024-05-09_16:11:10 [CMD]:make
+  305  2024-05-09_16:11:10 [CMD]:touch main.c
+  306  2024-05-09_16:11:10 [CMD]:make
+  307  2024-05-09_16:11:10 [CMD]:gcc
+  308  2024-05-09_16:11:10 [CMD]:cd
+  309  2024-05-09_16:11:10 [CMD]:pwd
+  310  2024-05-09_16:11:10 [CMD]:ls -la
+  311  2024-05-09_16:11:10 [CMD]:cp test.txt test.txt.bak
+  312  2024-05-09_16:11:10 [CMD]:ls -l
+  313  2024-05-09_16:11:10 [CMD]:cp test.txt test.txt.bak
+  314  2024-05-09_16:11:10 [CMD]:alias
+  315  2024-05-09_16:11:10 [CMD]:ls -l
+  316  2024-05-09_16:11:10 [CMD]:cp -f test.txt test.txt.bak
+  317  2024-05-09_16:11:10 [CMD]:whereis cp
+  318  2024-05-09_16:11:10 [CMD]:/usr/bin/cp test.txt test.txt.bak
+  319  2024-05-09_16:11:10 [CMD]:ls -l
+  320  2024-05-09_16:11:10 [CMD]:cp test.txt test01
+  321  2024-05-09_16:11:10 [CMD]:ls test01
+  322  2024-05-09_16:11:10 [CMD]:cp test.txt test01
+  323  2024-05-09_16:11:10 [CMD]:cp test.txt .
+  324  2024-05-09_16:11:10 [CMD]:ls -l
+  325  2024-05-09_16:11:10 [CMD]:cp dowork test01
+  326  2024-05-09_16:11:10 [CMD]:cp *.txt test01
+  327  2024-05-09_16:11:10 [CMD]:ls -l test01
+  328  2024-05-09_16:11:10 [CMD]:cp dowork test01
+  329  2024-05-09_16:11:10 [CMD]:cp -R dowork test01
+  330  2024-05-09_16:11:10 [CMD]:cp -r dowork test01
+  331  2024-05-09_16:11:10 [CMD]:ls -l test01
+  332  2024-05-09_16:11:10 [CMD]:ls -l
+  333  2024-05-09_16:11:10 [CMD]:cp test.txt test.txt.bak
+  334  2024-05-09_16:11:10 [CMD]:cp -f test.txt test.txt.bak
+  335  2024-05-09_16:11:10 [CMD]:/usr/bin/cp test.txt test.txt.bak
+  336  2024-05-09_16:11:10 [CMD]:\cp test.txt test.txt.bak
+  337  2024-05-09_16:11:10 [CMD]:ls -l
+  338  2024-05-09_16:11:10 [CMD]:mv test.txt test02.txt
+  339  2024-05-09_16:11:10 [CMD]:ls -l
+  340  2024-05-09_16:11:10 [CMD]:clear
+  341  2024-05-09_16:11:10 [CMD]:ls
+  342  2024-05-09_16:11:10 [CMD]:ls -l
+  343  2024-05-09_16:11:10 [CMD]:touch test
+  344  2024-05-09_16:11:10 [CMD]:ls -l
+  345  2024-05-09_16:11:10 [CMD]:mv test test2
+  346  2024-05-09_16:11:10 [CMD]:ls -l
+  347  2024-05-09_16:11:10 [CMD]:mv test2 test01/test3
+  348  2024-05-09_16:11:10 [CMD]:ls -l test01
+  349  2024-05-09_16:11:10 [CMD]:touch test
+  350  2024-05-09_16:11:10 [CMD]:ls -l
+  351  2024-05-09_16:11:10 [CMD]:mv test test01/test3
+  352  2024-05-09_16:11:10 [CMD]:alias
+  353  2024-05-09_16:11:10 [CMD]:clear
+  354  2024-05-09_16:11:10 [CMD]:ls -l
+  355  2024-05-09_16:11:10 [CMD]:mv test test01/test3
+  356  2024-05-09_16:11:10 [CMD]:mv -f test test01/test3
+  357  2024-05-09_16:11:10 [CMD]:touch test
+  358  2024-05-09_16:11:10 [CMD]:clear
+  359  2024-05-09_16:11:10 [CMD]:ls -l
+  360  2024-05-09_16:11:10 [CMD]:mv -b test test01/test3
+  361  2024-05-09_16:11:10 [CMD]:ls -l
+  362  2024-05-09_16:11:10 [CMD]:ls -l test01
+  363  2024-05-09_16:11:10 [CMD]:clear
+  364  2024-05-09_16:11:10 [CMD]:pwd
+  365  2024-05-09_16:11:10 [CMD]:ls -l
+  366  2024-05-09_16:11:10 [CMD]:ls -l test01
+  367  2024-05-09_16:11:10 [CMD]:rm test01/test03~
+  368  2024-05-09_16:11:10 [CMD]:rm test01/test3~
+  369  2024-05-09_16:11:10 [CMD]:rm -f test01/test3~
+  370  2024-05-09_16:11:10 [CMD]:ls -l test01
+  371  2024-05-09_16:11:10 [CMD]:rm -f test01/*t*
+  372  2024-05-09_16:11:10 [CMD]:ls -l test01
+  373  2024-05-09_16:11:10 [CMD]:clear
+  374  2024-05-09_16:11:10 [CMD]:ls -la
+  375  2024-05-09_16:11:10 [CMD]:cp -R dowork dowork.bak
+  376  2024-05-09_16:11:10 [CMD]:ls -l
+  377  2024-05-09_16:11:10 [CMD]:rm -f dowork.bak/
+  378  2024-05-09_16:11:10 [CMD]:rm -fr dowork.bak/
+  379  2024-05-09_16:11:10 [CMD]:clear
+  380  2024-05-09_16:11:10 [CMD]:cat /etc/profile
+  381  2024-05-09_16:11:10 [CMD]:cat -n /etc/profile
+  382  2024-05-09_16:11:10 [CMD]:cat -b /etc/profile
+  383  2024-05-09_16:11:10 [CMD]:cat -nb /etc/profile
+  384  2024-05-09_16:11:10 [CMD]:cat -E /etc/profile
+  385  2024-05-09_16:11:10 [CMD]:clear
+  386  2024-05-09_16:11:10 [CMD]:more /etc/profile
+  387  2024-05-09_16:11:10 [CMD]:less /etc/profile
+  388  2024-05-09_16:11:10 [CMD]:find / -name "*.java"
+  389  2024-05-09_16:11:10 [CMD]:ls -l
+  390  2024-05-09_16:11:10 [CMD]:cd /home
+  391  2024-05-09_16:11:10 [CMD]:cd kickscar
+  392  2024-05-09_16:11:10 [CMD]:ls -al
+  393  2024-05-09_16:11:10 [CMD]:find / -name "hello*"
+  394  2024-05-09_16:11:10 [CMD]:find /home -user "kickscar"
+  395  2024-05-09_16:11:10 [CMD]:find / -user "kickscar"
+  396  2024-05-09_16:11:10 [CMD]:find / -user "kickscar" 2>/dev/null
+  397  2024-05-09_16:11:10 [CMD]:find /home -perm 755 
+  398  2024-05-09_16:11:10 [CMD]:cd /home
+  399  2024-05-09_16:11:10 [CMD]:ls -l
+  400  2024-05-09_16:11:10 [CMD]:rm -rf /home/user1
+  401  2024-05-09_16:11:10 [CMD]:ls -l
+  402  2024-05-09_16:11:10 [CMD]:find /dev -type c
+  403  2024-05-09_16:11:10 [CMD]:find /dev -type b
+  404  2024-05-09_16:11:10 [CMD]:grep bin /etc/profile
+  405  2024-05-09_16:11:10 [CMD]:grep -n bin /etc/profile
+  406  2024-05-09_16:11:10 [CMD]:ps -ef
+  407  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd
+  408  2024-05-09_16:11:10 [CMD]:clear
+  409  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd
+  410  2024-05-09_16:11:10 [CMD]:cat /etc/profile 
+  411  2024-05-09_16:11:10 [CMD]:cat /etc/profile | grep bin
+  412  2024-05-09_16:11:10 [CMD]:clear
+  413  2024-05-09_16:11:10 [CMD]:cat /etc/profile | grep bin
+  414  2024-05-09_16:11:10 [CMD]:clear
+  415  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd
+  416  2024-05-09_16:11:10 [CMD]:ps -ef | grep -v sshd
+  417  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd 
+  418  2024-05-09_16:11:10 [CMD]:clear
+  419  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd 
+  420  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd | grep -v grep
+  421  2024-05-09_16:11:10 [CMD]:ps -ef | grep sshd
+  422  2024-05-09_16:11:10 [CMD]:ps -ef
+  423  2024-05-09_16:11:10 [CMD]:cat /var/log/secure 
+  424  2024-05-09_16:11:10 [CMD]:grep -c root /var/log/secure 
+  425  2024-05-09_16:11:10 [CMD]:grep root /var/log/secure 
+  426  2024-05-09_16:11:10 [CMD]:grep -n root /var/log/secure 
+  427  2024-05-09_16:11:10 [CMD]:grep root /var/log/secure | less
+  428  2024-05-09_16:11:10 [CMD]:clear
+  429  2024-05-09_16:11:10 [CMD]:echo "hello"
+  430  2024-05-09_16:11:10 [CMD]:echo $PATH
+  431  2024-05-09_16:11:10 [CMD]:echo "hello" > hello.txt
+  432  2024-05-09_16:11:10 [CMD]:cat hello.txt
+  433  2024-05-09_16:11:10 [CMD]:echo "hello" > hello.txt
+  434  2024-05-09_16:11:10 [CMD]:cat hello.txt
+  435  2024-05-09_16:11:10 [CMD]:echo "hello" >> hello.txt
+  436  2024-05-09_16:11:10 [CMD]:cat hello.txt
+  437  2024-05-09_16:11:10 [CMD]:echo "hello" > hello.txt
+  438  2024-05-09_16:11:10 [CMD]:cat hello.txt
+  439  2024-05-09_16:11:10 [CMD]:echo "apple" >> hello.txt
+  440  2024-05-09_16:11:10 [CMD]:echo "linux" >> hello.txt
+  441  2024-05-09_16:11:10 [CMD]:echo "java" >> hello.txt
+  442  2024-05-09_16:11:10 [CMD]:echo "red" >> hello.txt
+  443  2024-05-09_16:11:10 [CMD]:echo "hat" >> hello.txt
+  444  2024-05-09_16:11:10 [CMD]:echo "gnu" >> hello.txt
+  445  2024-05-09_16:11:10 [CMD]:echo "unix" >> hello.txt
+  446  2024-05-09_16:11:10 [CMD]:cat hello.txt
+  447  2024-05-09_16:11:10 [CMD]:sort < hello.txt
+  448  2024-05-09_16:11:10 [CMD]:sort < hello.txt > sort.txt
+  449  2024-05-09_16:11:10 [CMD]:cat sort.txt
+  450  2024-05-09_16:11:10 [CMD]:ls -l
+  451  2024-05-09_16:11:10 [CMD]:cd
+  452  2024-05-09_16:11:10 [CMD]:ls -la
+  453  2024-05-09_16:11:10 [CMD]:chmod 600 hello.txt
+  454  2024-05-09_16:11:10 [CMD]:ls -la
+  455  2024-05-09_16:11:10 [CMD]:chown kickscar:root hello.txt
+  456  2024-05-09_16:11:10 [CMD]:ls -l
+  457  2024-05-09_16:11:10 [CMD]:cd /home
+  458  2024-05-09_16:11:10 [CMD]:ls -la
+  459  2024-05-09_16:11:10 [CMD]:ls -l
+  460  2024-05-09_16:11:10 [CMD]:tar cvf kickscar.tar kickscar/
+  461  2024-05-09_16:11:10 [CMD]:ls -l
+  462  2024-05-09_16:11:10 [CMD]:mv kickscar.tar /root
+  463  2024-05-09_16:11:10 [CMD]:ls -l
+  464  2024-05-09_16:11:10 [CMD]:cd
+  465  2024-05-09_16:11:10 [CMD]:pwd
+  466  2024-05-09_16:11:10 [CMD]:ls
+  467  2024-05-09_16:11:10 [CMD]:tar xvf kickscar.tar 
+  468  2024-05-09_16:11:10 [CMD]:ls -l
+  469  2024-05-09_16:11:10 [CMD]:rm -rf kickscar*
+  470  2024-05-09_16:11:10 [CMD]:ls -l
+  471  2024-05-09_16:11:10 [CMD]:cd /home
+  472  2024-05-09_16:11:10 [CMD]:clear
+  473  2024-05-09_16:11:10 [CMD]:ls -l
+  474  2024-05-09_16:11:10 [CMD]:tar cvf kickscar.tar kickscar/
+  475  2024-05-09_16:11:10 [CMD]:ls -l
+  476  2024-05-09_16:11:10 [CMD]:gzip kickscar.tar 
+  477  2024-05-09_16:11:10 [CMD]:ls -l
+  478  2024-05-09_16:11:10 [CMD]:mv kickscar.tar.gz ~
+  479  2024-05-09_16:11:10 [CMD]:cd
+  480  2024-05-09_16:11:10 [CMD]:clear
+  481  2024-05-09_16:11:10 [CMD]:pwd
+  482  2024-05-09_16:11:10 [CMD]:ls -l
+  483  2024-05-09_16:11:10 [CMD]:gzip -d kickscar.tar.gz 
+  484  2024-05-09_16:11:10 [CMD]:ls -l
+  485  2024-05-09_16:11:10 [CMD]:tar xvf kickscar.tar 
+  486  2024-05-09_16:11:10 [CMD]:ls -l
+  487  2024-05-09_16:11:10 [CMD]:rm -rf kickscar
+  488  2024-05-09_16:11:10 [CMD]:ls -l
+  489  2024-05-09_16:11:10 [CMD]:gzip kickscar.tar 
+  490  2024-05-09_16:11:10 [CMD]:ls -l
+  491  2024-05-09_16:11:10 [CMD]:tar xvfz kickscar.tar.gz 
+  492  2024-05-09_16:11:10 [CMD]:ls -l
+  493  2024-05-09_16:11:10 [CMD]:rm -rf kickscar*
+  494  2024-05-09_16:11:10 [CMD]:ls -l
+  495  2024-05-09_16:11:10 [CMD]:clear
+  496  2024-05-09_16:11:10 [CMD]:pwd
+  497  2024-05-09_16:11:10 [CMD]:yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib.devel perl.devel
+  498  2024-05-09_16:11:10 [CMD]:yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel
+  499  2024-05-09_16:11:10 [CMD]:wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.0.tar.gz
+  500  2024-05-09_16:11:10 [CMD]:ls -l
+  501  2024-05-09_16:11:10 [CMD]:ls
+  502  2024-05-09_16:11:10 [CMD]:tar xvfz git-2.45.0.tar.gz 
+  503  2024-05-09_16:11:10 [CMD]:ls
+  504  2024-05-09_16:11:10 [CMD]:cd git-2.45.0
+  505  2024-05-09_16:11:10 [CMD]:pwd
+  506  2024-05-09_16:11:10 [CMD]:./configure --prefix=/usr/local/poscodx/git-2.45.0
+  507  2024-05-09_16:11:10 [CMD]:make
+  508  2024-05-09_16:11:10 [CMD]:pwd
+  509  2024-05-09_16:11:10 [CMD]:make install
+  510  2024-05-09_16:11:10 [CMD]:cd
+  511  2024-05-09_16:11:10 [CMD]:pwd
+  512  2024-05-09_16:11:10 [CMD]:/usr/local/poscodx/git-2.45.0/bin/git --version
+  513  2024-05-09_16:11:10 [CMD]:ln -s /usr/local/poscodx/git-2.45.0/ /usr/local/poscodx/git
+  514  2024-05-09_16:11:10 [CMD]:ls -l /usr/local/poscodx/
+  515  2024-05-09_16:11:10 [CMD]:cd /usr/local/poscodx/
+  516  2024-05-09_16:11:10 [CMD]:pwd
+  517  2024-05-09_16:11:10 [CMD]:clear
+  518  2024-05-09_16:11:10 [CMD]:pwd
+  519  2024-05-09_16:11:10 [CMD]:ls -l
+  520  2024-05-09_16:11:10 [CMD]:rm -f git
+  521  2024-05-09_16:11:10 [CMD]:ls -l
+  522  2024-05-09_16:11:10 [CMD]:ln -s git-2.45.0/ git
+  523  2024-05-09_16:11:10 [CMD]:ls -l
+  524  2024-05-09_16:11:10 [CMD]:cd git
+  525  2024-05-09_16:11:10 [CMD]:ls -l
+  526  2024-05-09_16:11:10 [CMD]:vi /etc/profile
+  527  2024-05-09_16:11:10 [CMD]:cd
+  528  2024-05-09_16:11:10 [CMD]:pwd
+  529  2024-05-09_16:11:10 [CMD]:source /etc/profile
+  530  2024-05-09_16:11:10 [CMD]:git --version
+  531  2024-05-09_16:11:10 [CMD]:pwd
+  532  2024-05-09_16:11:10 [CMD]:mkdir rocky-practices
+  533  2024-05-09_16:11:10 [CMD]:cd rocky-practices/
+  534  2024-05-09_16:11:10 [CMD]:ls -l
+  535  2024-05-09_16:11:10 [CMD]:pwd
+  536  2024-05-09_16:11:10 [CMD]:mkdir docs
+  537  2024-05-09_16:11:10 [CMD]:mkdir lx
+  538  2024-05-09_16:11:10 [CMD]:cd docs
+  539  2024-05-09_16:11:10 [CMD]:pwd
+  540  2024-05-09_16:11:10 [CMD]:vi git-install.md
+  541  2024-05-09_16:11:10 [CMD]:cat git-install.md 
+  542  2024-05-09_16:11:10 [CMD]:cd ..
+  543  2024-05-09_16:11:10 [CMD]:ls -l
+  544  2024-05-09_16:11:10 [CMD]:cd lx
+  545  2024-05-09_16:11:10 [CMD]:mkdir /etc
+  546  2024-05-09_16:11:10 [CMD]:mkdir etc
+  547  2024-05-09_16:11:10 [CMD]:ls -l
+  548  2024-05-09_16:11:10 [CMD]:mkdir root
+  549  2024-05-09_16:11:10 [CMD]:ls -l
+  550  2024-05-09_16:11:10 [CMD]:cd ..
+  551  2024-05-09_16:11:10 [CMD]:ls -la
+  552  2024-05-09_16:11:10 [CMD]:cd lx
+  553  2024-05-09_16:11:10 [CMD]:pwd
+  554  2024-05-09_16:11:10 [CMD]:ls -l
+  555  2024-05-09_16:11:10 [CMD]:cp /etc/profile etc
+  556  2024-05-09_16:11:10 [CMD]:cp -R /root/dowork/ root/
+  557  2024-05-09_16:11:10 [CMD]:ls -l
+  558  2024-05-09_16:11:10 [CMD]:cd etc
+  559  2024-05-09_16:11:10 [CMD]:ls -la
+  560  2024-05-09_16:11:10 [CMD]:cd ..
+  561  2024-05-09_16:11:10 [CMD]:ls -l
+  562  2024-05-09_16:11:10 [CMD]:cd root/
+  563  2024-05-09_16:11:10 [CMD]:ls -la
+  564  2024-05-09_16:11:10 [CMD]:cd dowork/
+  565  2024-05-09_16:11:10 [CMD]:ls -la
+  566  2024-05-09_16:11:10 [CMD]:cd ..
+  567  2024-05-09_16:11:10 [CMD]:ls -la
+  568  2024-05-09_16:11:10 [CMD]:pwd
+  569  2024-05-09_16:11:10 [CMD]:echo "# rocky-practices" >> README.md
+  570  2024-05-09_16:11:10 [CMD]:ls -l
+  571  2024-05-09_16:11:10 [CMD]:git init
+  572  2024-05-09_16:11:10 [CMD]:ls -l
+  573  2024-05-09_16:11:10 [CMD]:ls -la
+  574  2024-05-09_16:11:10 [CMD]:git add -A
+  575  2024-05-09_16:11:10 [CMD]:git commit -m 'first commit'
+  576  2024-05-09_16:11:10 [CMD]:git config --global user.name 'bitacademy-poscodx'
+  577  2024-05-09_16:11:10 [CMD]:git config --global user.email 'poscoict.bitacademy@gmail.com'
+  578  2024-05-09_16:11:10 [CMD]:git branch -M main
+  579  2024-05-09_16:11:10 [CMD]:git remote add origin https://github.com/bitacademy-poscodx/rocky-practices.git
+  580  2024-05-09_16:11:10 [CMD]:git config credential.helper store
+  581  2024-05-09_16:11:10 [CMD]:git push -u origin main
+  582  2024-05-09_16:11:10 [CMD]:cd
+  583  2024-05-09_16:11:10 [CMD]:pwd
+  584  2024-05-09_16:11:10 [CMD]:ls -la
+  585  2024-05-09_16:11:10 [CMD]:cd dowork/
+  586  2024-05-09_16:11:10 [CMD]:ls -la
+  587  2024-05-09_16:11:10 [CMD]:pwd
+  588  2024-05-09_16:11:10 [CMD]:mkdir java
+  589  2024-05-09_16:11:10 [CMD]:ls -l
+  590  2024-05-09_16:11:10 [CMD]:cd java/
+  591  2024-05-09_16:11:10 [CMD]:ls -la
+  592  2024-05-09_16:11:10 [CMD]:pwd
+  593  2024-05-09_16:11:10 [CMD]:vi HelloWorld.java
+  594  2024-05-09_16:11:10 [CMD]:ls -l
+  595  2024-05-09_16:11:10 [CMD]:javac HelloWorld.java
+  596  2024-05-09_16:11:10 [CMD]:ls -l
+  597  2024-05-09_16:11:10 [CMD]:java HelloWorld
+  598  2024-05-09_16:11:10 [CMD]:cd /usr/local/poscodx
+  599  2024-05-09_16:11:10 [CMD]:pwd
+  600  2024-05-09_16:11:10 [CMD]:ls -l
+  601  2024-05-09_16:11:10 [CMD]:ln -s jdk-17.0.10/ java
+  602  2024-05-09_16:11:10 [CMD]:cd
+  603  2024-05-09_16:11:10 [CMD]:pwd
+  604  2024-05-09_16:11:10 [CMD]:ls -l /usr/local/poscodx
+  605  2024-05-09_16:11:10 [CMD]:vi /etc/profile
+  606  2024-05-09_16:11:10 [CMD]:source /etc/profile
+  607  2024-05-09_16:11:10 [CMD]:java --version
+  608  2024-05-09_16:11:10 [CMD]:cd rocky-practices/
+  609  2024-05-09_16:11:10 [CMD]:ls -l
+  610  2024-05-09_16:11:10 [CMD]:cp -R /root/dowork/java/ lx/root/dowork/
+  611  2024-05-09_16:11:10 [CMD]:git add -A
+  612  2024-05-09_16:11:10 [CMD]:git commit -m 'java example'
+  613  2024-05-09_16:11:10 [CMD]:git push
+  614  2024-05-09_16:11:10 [CMD]:cd ..
+  615  2024-05-09_16:11:10 [CMD]:ls -la
+  616  2024-05-09_16:11:10 [CMD]:cd dowork/
+  617  2024-05-09_16:11:10 [CMD]:pwd
+  618  2024-05-09_16:11:10 [CMD]:sl -l
+  619  2024-05-09_16:11:10 [CMD]:ls -l
+  620  2024-05-09_16:11:10 [CMD]:git clone https://github.com/bitacademy-poscodx/java-study.git
+  621  2024-05-09_16:11:10 [CMD]:ls -la
+  622  2024-05-09_16:11:10 [CMD]:cd java
+  623  2024-05-09_16:11:10 [CMD]:cd ..
+  624  2024-05-09_16:11:10 [CMD]:ls -l
+  625  2024-05-09_16:11:10 [CMD]:cd java-study/
+  626  2024-05-09_16:11:10 [CMD]:ls -l
+  627  2024-05-09_16:11:10 [CMD]:mvn clean package
+  628  2024-05-09_16:11:10 [CMD]:cd ..
+  629  2024-05-09_16:11:10 [CMD]:ls -la
+  630  2024-05-09_16:11:10 [CMD]:rm -rf java-study/
+  631  2024-05-09_16:11:10 [CMD]:ls -la
+  632  2024-05-09_16:11:10 [CMD]:cd ..
+  633  2024-05-09_16:11:10 [CMD]:ls -la
+  634  2024-05-09_16:11:10 [CMD]:cd rocky-practices/
+  635  2024-05-09_16:11:10 [CMD]:ls -la
+  636  2024-05-09_16:11:10 [CMD]:cd docs/
+  637  2024-05-09_16:11:10 [CMD]:ls -la
+  638  2024-05-09_16:11:10 [CMD]:ifconfig -a
+  639  2024-05-09_16:11:10 [CMD]:java --version
+  640  2024-05-09_16:11:10 [CMD]:cd ..
+  641  2024-05-09_16:11:10 [CMD]:git pull
+  642  2024-05-09_16:11:10 [CMD]:git add -A
+  643  2024-05-09_16:11:10 [CMD]:git commit -m '.'
+  644  2024-05-09_16:11:10 [CMD]:date
+  645  2024-05-09_16:11:10 [CMD]:systemctl status chrony
+  646  2024-05-09_16:11:10 [CMD]:systemctl status chronyd
+  647  2024-05-09_16:11:10 [CMD]:cat /etc/chrony.conf 
+  648  2024-05-09_16:11:10 [CMD]:timedatectl
+  649  2024-05-09_16:11:10 [CMD]:date
+  650  2024-05-09_16:11:10 [CMD]:sync
+  651  2024-05-09_16:11:10 [CMD]:sytnc
+  652  2024-05-09_16:11:10 [CMD]:sync
+  653  2024-05-09_16:11:10 [CMD]:shutdown -h now
+  654  2024-05-09_16:11:10 [CMD]:cat /etc/profile
+  655  2024-05-09_16:11:10 [CMD]:ifconfig -a
+  656  2024-05-09_09:01:36 [CMD]:yum repolist
+  657  2024-05-09_09:02:53 [CMD]:clear
+  658  2024-05-09_09:02:55 [CMD]:ps -ef
+  659  2024-05-09_09:02:58 [CMD]:clear
+  660  2024-05-09_09:03:01 [CMD]:pstree
+  661  2024-05-09_09:05:31 [CMD]:ps -ef
+  662  2024-05-09_09:07:14 [CMD]:cd dowork/
+  663  2024-05-09_09:07:15 [CMD]:ls -la
+  664  2024-05-09_09:07:22 [CMD]:mkdir sh
+  665  2024-05-09_09:07:24 [CMD]:ls -l
+  666  2024-05-09_09:07:34 [CMD]:cd sh
+  667  2024-05-09_09:07:35 [CMD]:pwd
+  668  2024-05-09_09:08:29 [CMD]:vi hello.sh
+  669  2024-05-09_09:11:31 [CMD]:ls -l
+  670  2024-05-09_09:12:22 [CMD]:chmod 750 hello.sh
+  671  2024-05-09_09:12:28 [CMD]:ls -l
+  672  2024-05-09_09:12:34 [CMD]:./hello.sh 
+  673  2024-05-09_09:14:01 [CMD]:pstree
+  674  2024-05-09_09:17:57 [CMD]:timedatectl
+  675  2024-05-09_09:18:55 [CMD]:timedatectl set-timezone Asia/seoul
+  676  2024-05-09_09:19:05 [CMD]:timedatectl set-timezone Asia/Seoul
+  677  2024-05-09_09:19:09 [CMD]:timedatectl
+  678  2024-05-09_09:20:39 [CMD]:yum -y install chrony
+  679  2024-05-09_09:21:39 [CMD]:vi /etc/chrony.conf 
+  680  2024-05-09_09:23:22 [CMD]:ps -ef | grep chrond
+  681  2024-05-09_09:27:18 [CMD]:ps -ef | grep chronyd
+  682  2024-05-09_09:27:43 [CMD]:systemctl restart chronyd
+  683  2024-05-09_09:27:49 [CMD]:systemctl status chronyd
+  684  2024-05-09_09:28:11 [CMD]:systemctl status sshd
+  685  2024-05-09_09:28:38 [CMD]:chrony sources -v
+  686  2024-05-09_09:28:47 [CMD]:chronyc sources -v
+  687  2024-05-09_09:29:40 [CMD]:ps -ef | grep chronyd
+  688  2024-05-09_09:30:21 [CMD]:ls -la
+  689  2024-05-09_09:30:23 [CMD]:cd ..
+  690  2024-05-09_09:30:27 [CMD]:ls -l
+  691  2024-05-09_09:30:33 [CMD]:cd rocky-practices/
+  692  2024-05-09_09:30:35 [CMD]:pwd
+  693  2024-05-09_09:30:56 [CMD]:git pull
+  694  2024-05-09_09:31:36 [CMD]:clear
+  695  2024-05-09_09:31:37 [CMD]:ls -l
+  696  2024-05-09_09:31:46 [CMD]:cd lx
+  697  2024-05-09_09:31:48 [CMD]:l s-l
+  698  2024-05-09_09:31:49 [CMD]:ls -l
+  699  2024-05-09_09:31:55 [CMD]:cd etc
+  700  2024-05-09_09:31:58 [CMD]:ls -l
+  701  2024-05-09_09:32:17 [CMD]:cp /etc/chrony.conf .
+  702  2024-05-09_09:32:19 [CMD]:ls -l
+  703  2024-05-09_09:32:43 [CMD]:git add -A
+  704  2024-05-09_09:32:55 [CMD]:git commit -m 'chronyd'
+  705  2024-05-09_09:32:57 [CMD]:git push
+  706  2024-05-09_09:36:09 [CMD]:cd /
+  707  2024-05-09_09:36:12 [CMD]:pwd
+  708  2024-05-09_09:37:15 [CMD]:vi /etc/profile
+  709  2024-05-09_09:38:08 [CMD]:history
+  710  2024-05-09_09:40:27 [CMD]:vi /etc/profile
+  711  2024-05-09_09:41:12 [CMD]:source /etc/profile
+  712  2024-05-09_09:41:17 [CMD]:history
+  713  2024-05-09_09:41:31 [CMD]:cd
+  714  2024-05-09_09:42:00 [CMD]:cp /etc/profile ~/rocky-practices/lx/etc
+  715  2024-05-09_09:42:40 [CMD]:clear
+  716  2024-05-09_09:42:44 [CMD]:df -h
+  717  2024-05-09_09:46:36 [CMD]:fdisk -l
+  718  2024-05-09_09:48:02 [CMD]:cat /etc/fstab
+  719  2024-05-09_09:49:13 [CMD]:blkid
+  720  2024-05-09_16:11:10 [CMD]:javac HelloWorld.java
+  721  2024-05-09_16:11:10 [CMD]:java HelloWorld
+  722  2024-05-09_16:11:10 [CMD]:ls -l
+  723  2024-05-09_16:11:10 [CMD]:java -cp . HelloWorld
+  724  2024-05-09_16:11:10 [CMD]:exit
+  725  2024-05-09_10:48:39 [CMD]:java HelloWorld
+  726  2024-05-09_10:48:43 [CMD]:java -cp . HelloWorld
+  727  2024-05-09_10:48:55 [CMD]:vi /etc/profile
+  728  2024-05-09_10:49:46 [CMD]:source /etc/profile
+  729  2024-05-09_10:49:51 [CMD]:java HelloWorld
+  730  2024-05-09_10:50:05 [CMD]:exit
+  731  2024-05-09_10:04:13 [CMD]:vi /etc/profile
+  732  2024-05-09_10:04:31 [CMD]:source /etc/profile
+  733  2024-05-09_10:07:11 [CMD]:cd
+  734  2024-05-09_10:07:13 [CMD]:clear
+  735  2024-05-09_10:07:14 [CMD]:l s-l
+  736  2024-05-09_10:07:15 [CMD]:ls -l
+  737  2024-05-09_10:07:21 [CMD]:cd dowork/
+  738  2024-05-09_10:07:22 [CMD]:ls -l
+  739  2024-05-09_10:07:32 [CMD]:vi java/HelloWorld.java 
+  740  2024-05-09_10:11:24 [CMD]:cd java
+  741  2024-05-09_10:11:25 [CMD]:ls -l
+  742  2024-05-09_10:11:35 [CMD]:vi java/HelloWorld.java 
+  743  2024-05-09_10:11:51 [CMD]:ls -l
+  744  2024-05-09_10:12:00 [CMD]:vi HelloWorld.java 
+  745  2024-05-09_10:12:35 [CMD]:ls -l
+  746  2024-05-09_10:12:37 [CMD]:cd ..
+  747  2024-05-09_10:12:38 [CMD]:ls -l
+  748  2024-05-09_10:12:42 [CMD]:rm -f HelloWorld2.java 
+  749  2024-05-09_10:12:43 [CMD]:ls -l
+  750  2024-05-09_10:12:45 [CMD]:cd java
+  751  2024-05-09_10:12:47 [CMD]:ls -l
+  752  2024-05-09_10:12:55 [CMD]:vi HelloWorld2.java 
+  753  2024-05-09_10:16:12 [CMD]:cd ..
+  754  2024-05-09_10:16:13 [CMD]:ls -la
+  755  2024-05-09_10:16:18 [CMD]:mkdir docs
+  756  2024-05-09_10:16:22 [CMD]:ls
+  757  2024-05-09_10:16:24 [CMD]:cd docs
+  758  2024-05-09_10:16:35 [CMD]:vi test.txt
+  759  2024-05-09_10:21:14 [CMD]:vi /etc/profile
+  760  2024-05-09_10:24:46 [CMD]:vi test.txt
+  761  2024-05-09_10:26:41 [CMD]:vi /etc/profile
+  762  2024-05-09_10:26:51 [CMD]:vi test.txt 
+  763  2024-05-09_10:32:48 [CMD]:cd ..
+  764  2024-05-09_10:32:51 [CMD]:cd java
+  765  2024-05-09_10:32:52 [CMD]:ls -la
+  766  2024-05-09_10:32:57 [CMD]:vi HelloWorld2.java 
+  767  2024-05-09_10:37:02 [CMD]:vi /etc/profile
+  768  2024-05-09_10:38:15 [CMD]:vi HelloWorld2.java
+  769  2024-05-09_10:45:46 [CMD]:vi HelloWorld.java 
+  770  2024-05-09_11:01:51 [CMD]:ls -l
+  771  2024-05-09_11:03:39 [CMD]:cat /etc/profile
+  772  2024-05-09_11:03:51 [CMD]:source /etc/profile
+  773  2024-05-09_11:04:11 [CMD]:ls -l
+  774  2024-05-09_11:04:17 [CMD]:vi HelloWorld.java
+  775  2024-05-09_11:05:51 [CMD]:cd
+  776  2024-05-09_11:05:52 [CMD]:ls -la
+  777  2024-05-09_11:05:55 [CMD]:pwd
+  778  2024-05-09_11:06:17 [CMD]:vi .vimrc
+  779  2024-05-09_11:06:58 [CMD]:cd dowork/
+  780  2024-05-09_11:07:00 [CMD]:cd java/
+  781  2024-05-09_11:07:01 [CMD]:ls -la
+  782  2024-05-09_11:07:05 [CMD]:vi HelloWorld.java 
+  783  2024-05-09_11:07:19 [CMD]:exit
+  784  2024-05-09_10:41:54 [CMD]:vi /etc/profile
+  785  2024-05-09_11:07:39 [CMD]:ls -la
+  786  2024-05-09_11:07:41 [CMD]:cd dowork/
+  787  2024-05-09_11:07:43 [CMD]:cd java/
+  788  2024-05-09_11:07:48 [CMD]:vi HelloWorld.java 
+  789  2024-05-09_11:07:56 [CMD]:cd ..
+  790  2024-05-09_11:07:57 [CMD]:ls -l
+  791  2024-05-09_11:08:00 [CMD]:ls -la
+  792  2024-05-09_11:08:58 [CMD]:vi .vimrc
+  793  2024-05-09_11:10:07 [CMD]:mv .vimrc .virc
+  794  2024-05-09_11:10:26 [CMD]:cd dowork/
+  795  2024-05-09_11:10:28 [CMD]:ls -la
+  796  2024-05-09_11:10:30 [CMD]:cd java
+  797  2024-05-09_11:10:35 [CMD]:vi HelloWorld.java 
+  798  2024-05-09_11:10:43 [CMD]:cd ..
+  799  2024-05-09_11:10:45 [CMD]:ls -la
+  800  2024-05-09_11:10:54 [CMD]:ls -a
+  801  2024-05-09_11:11:09 [CMD]:cp .virc .vimrc
+  802  2024-05-09_11:11:10 [CMD]:ls -l
+  803  2024-05-09_11:11:13 [CMD]:ls -a
+  804  2024-05-09_11:11:20 [CMD]:cat .virc
+  805  2024-05-09_11:11:30 [CMD]:whereis vi
+  806  2024-05-09_11:11:40 [CMD]:cd /usr/bin
+  807  2024-05-09_11:11:43 [CMD]:ls -l vi*
+  808  2024-05-09_11:11:53 [CMD]:whereis vim
+  809  2024-05-09_11:12:06 [CMD]:cd /usr/share/vim/
+  810  2024-05-09_11:12:07 [CMD]:ls -l
+  811  2024-05-09_11:12:15 [CMD]:vim
+  812  2024-05-09_11:13:12 [CMD]:cd
+  813  2024-05-09_11:13:16 [CMD]:ld -la
+  814  2024-05-09_11:13:19 [CMD]:ls -la
+  815  2024-05-09_11:13:22 [CMD]:cd dowork/
+  816  2024-05-09_11:13:23 [CMD]:ls -la
+  817  2024-05-09_11:13:25 [CMD]:cd java
+  818  2024-05-09_11:13:26 [CMD]:ls -la
+  819  2024-05-09_11:13:31 [CMD]:vi HelloWorld.java 
+  820  2024-05-09_11:18:56 [CMD]:cd
+  821  2024-05-09_11:19:10 [CMD]:pinf www.posco.com
+  822  2024-05-09_11:19:15 [CMD]:ping www.posco.com
+  823  2024-05-09_11:19:23 [CMD]:ping www.google.com
+  824  2024-05-09_11:19:40 [CMD]:ping www.naver.com
+  825  2024-05-09_11:23:48 [CMD]:ifconfig -a
+  826  2024-05-09_11:24:58 [CMD]:ping 192.168.0.4
+  827  2024-05-09_11:27:04 [CMD]:cd /proc
+  828  2024-05-09_11:27:07 [CMD]:ls -l
+  829  2024-05-09_11:27:08 [CMD]:ls
+  830  2024-05-09_11:27:29 [CMD]:ps -ef | grep sshd
+  831  2024-05-09_11:29:07 [CMD]:cd
+  832  2024-05-09_11:29:09 [CMD]:clear
+  833  2024-05-09_11:29:10 [CMD]:pwd
+  834  2024-05-09_11:29:34 [CMD]:cat /proc/sys/net/ipv4/icmp_echo_ignore_all
+  835  2024-05-09_11:30:11 [CMD]:vi /etc/sysctl.conf 
+  836  2024-05-09_11:30:59 [CMD]:sysctl -p
+  837  2024-05-09_11:31:33 [CMD]:nslookup
+  838  2024-05-09_11:32:02 [CMD]:nslookup www.posco.dx
+  839  2024-05-09_11:32:04 [CMD]:nslookup www.posco.com
+  840  2024-05-09_11:38:48 [CMD]:vi /etc/hostname
+  841  2024-05-09_11:39:58 [CMD]:sync
+  842  2024-05-09_11:40:09 [CMD]:hostname
+  843  2024-05-09_11:40:22 [CMD]:reboot
+  844  2024-05-09_13:09:34 [CMD]:nmcli connection up enp0s3
+  845  2024-05-09_13:20:34 [CMD]:ifconfig -a
+  846  2024-05-09_13:25:10 [CMD]:nslookup www.posco.com
+  847  2024-05-09_13:33:49 [CMD]:vi /etc/NetworkManager/system-connections/enp0s3.nmconnection 
+  848  2024-05-09_13:37:34 [CMD]:systemctl restart NetworkManager
+  849  2024-05-09_13:37:43 [CMD]:ifconfig -a
+  850  2024-05-09_13:37:56 [CMD]:nslookup www.posco.com
+  851  2024-05-09_14:22:30 [CMD]:ps -ef | grep firewalld
+  852  2024-05-09_14:24:00 [CMD]:vi /etc/firewalld/zones/public.xml
+  853  2024-05-09_14:25:45 [CMD]:wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.89/bin/apache-tomcat-9.0.89.tar.gz
+  854  2024-05-09_14:26:06 [CMD]:clear
+  855  2024-05-09_14:26:08 [CMD]:tar xvfz apache-tomcat-9.0.89.tar.gz
+  856  2024-05-09_14:26:19 [CMD]:ls -l
+  857  2024-05-09_14:26:37 [CMD]:mv apache-tomcat-9.0.89 /usr/local/poscodx/
+  858  2024-05-09_14:26:46 [CMD]:cd /usr/local/poscodx/
+  859  2024-05-09_14:26:53 [CMD]:ls -l
+  860  2024-05-09_14:27:04 [CMD]:ln -s apache-tomcat-9.0.89/ tomcat
+  861  2024-05-09_14:27:08 [CMD]:ls -l
+  862  2024-05-09_14:27:49 [CMD]:cd
+  863  2024-05-09_14:27:50 [CMD]:pwd
+  864  2024-05-09_14:28:03 [CMD]:vi /usr/local/poscodx/tomcat/conf/server.xml 
+  865  2024-05-09_14:29:27 [CMD]:/usr/local/poscodx/tomcat/bin/catalina.sh start
+  866  2024-05-09_14:30:04 [CMD]:ps -ef | grep tomcat
+  867  2024-05-09_14:30:10 [CMD]:ps -ef | grep java
+  868  2024-05-09_14:31:27 [CMD]:netstat -anpt | grep LISTEN
+  869  2024-05-09_14:34:05 [CMD]:vi /etc/firewalld/zones/public.xml
+  870  2024-05-09_14:36:32 [CMD]:cd /usr/lib/firewalld/services
+  871  2024-05-09_14:36:44 [CMD]:ls
+  872  2024-05-09_14:37:01 [CMD]:cp ssh.xml tomcat.xml
+  873  2024-05-09_14:37:21 [CMD]:vi tomcat.xml 
+  874  2024-05-09_14:42:15 [CMD]:systemctl stop firewalld
+  875  2024-05-09_14:42:27 [CMD]:ps -ef | grep firewalld
+  876  2024-05-09_14:42:51 [CMD]:systemctl start firewalld
+  877  2024-05-09_14:42:54 [CMD]:ps -ef | grep firewalld
+  878  2024-05-09_14:46:03 [CMD]:cd
+  879  2024-05-09_14:46:04 [CMD]:ls -la
+  880  2024-05-09_14:46:13 [CMD]:cd
+  881  2024-05-09_14:46:14 [CMD]:ls -la
+  882  2024-05-09_14:46:19 [CMD]:cd rocky-practices/
+  883  2024-05-09_14:46:20 [CMD]:ls -la
+  884  2024-05-09_14:46:24 [CMD]:cd lx
+  885  2024-05-09_14:46:25 [CMD]:ls -la
+  886  2024-05-09_14:47:01 [CMD]:cp -R /etc/firewalld/zones/public.xml etc
+  887  2024-05-09_14:47:04 [CMD]:cd etc
+  888  2024-05-09_14:47:05 [CMD]:ls -la
+  889  2024-05-09_14:47:27 [CMD]:mkdir firewalld/zones
+  890  2024-05-09_14:47:32 [CMD]:mkdir -p firewalld/zones
+  891  2024-05-09_14:47:43 [CMD]:mv public.xml firewalld/zones/
+  892  2024-05-09_14:51:22 [CMD]:cd ..
+  893  2024-05-09_14:51:48 [CMD]:mkdir -p usr/lib/firewalld/services
+  894  2024-05-09_14:52:28 [CMD]:cp /usr/lib/firewalld/services/tomcat.xml ~/lx/usr/lib/firewalld/services/
+  895  2024-05-09_14:52:33 [CMD]:cp /usr/lib/firewalld/services/tomcat.xml ~/lx/usr/lib/firewalld/services
+  896  2024-05-09_14:52:52 [CMD]:cp /usr/lib/firewalld/services/tomcat.xml ~/rocky-practices/lx/usr/lib/firewalld/services
+  897  2024-05-09_14:52:54 [CMD]:ls -l
+  898  2024-05-09_14:52:58 [CMD]:git add -A
+  899  2024-05-09_14:53:09 [CMD]:git commit -m '.'
+  900  2024-05-09_14:53:11 [CMD]:git push
+  901  2024-05-09_14:54:53 [CMD]:git pull
+  902  2024-05-09_15:04:14 [CMD]:/usr/local/poscodx/tomcat/bin/catalina.sh stop
+  903  2024-05-09_15:04:38 [CMD]:ps -ef | grep tomcat
+  904  2024-05-09_15:10:14 [CMD]:ifconfig -a
+  905  2024-05-09_15:10:41 [CMD]:systemctl restart NetworkManager
+  906  2024-05-09_15:10:43 [CMD]:ifconfig -a
+  907  2024-05-09_15:11:08 [CMD]:ifconfig enp0s3 down
+  908  2024-05-09_15:11:12 [CMD]:ifconfig enp0s3 up
+  909  2024-05-09_15:11:18 [CMD]:ifconfig -a
+  910  2024-05-09_15:11:41 [CMD]:sync
+  911  2024-05-09_15:11:46 [CMD]:reboot
+  912  2024-05-09_15:12:42 [CMD]:echo $LD_LIBRARY_PATH
+  913  2024-05-09_15:13:07 [CMD]:echo $PATH
+  914  2024-05-09_15:14:35 [CMD]:clear
+  915  2024-05-09_15:14:38 [CMD]:cd usr
+  916  2024-05-09_15:14:40 [CMD]:cd /usr
+  917  2024-05-09_15:14:42 [CMD]:cd lib
+  918  2024-05-09_15:14:47 [CMD]:cd systemd/
+  919  2024-05-09_15:14:50 [CMD]:cd system
+  920  2024-05-09_15:14:51 [CMD]:pwd
+  921  2024-05-09_15:14:57 [CMD]:ls
+  922  2024-05-09_15:15:17 [CMD]:ls -l | grep ssh
+  923  2024-05-09_15:15:43 [CMD]:vi tomcat.service
+  924  2024-05-09_15:18:59 [CMD]:systemctl enable tomcat
+  925  2024-05-09_15:19:17 [CMD]:systemctl start tomcat
+  926  2024-05-09_15:19:38 [CMD]:systemctl status tomcat
+  927  2024-05-09_15:20:34 [CMD]:ps -ef | grep tomcat
+  928  2024-05-09_15:20:40 [CMD]:cd /usr
+  929  2024-05-09_15:20:57 [CMD]:cd local
+  930  2024-05-09_15:20:59 [CMD]:cd poscodx
+  931  2024-05-09_15:21:01 [CMD]:cd tomcat/
+  932  2024-05-09_15:21:02 [CMD]:ls -la
+  933  2024-05-09_15:21:06 [CMD]:cd logs/
+  934  2024-05-09_15:21:08 [CMD]:ls -l
+  935  2024-05-09_15:21:13 [CMD]:cat catalina.out 
+  936  2024-05-09_15:21:21 [CMD]:ls -l
+  937  2024-05-09_15:21:28 [CMD]:vi catalina.2024-05-09.log 
+  938  2024-05-09_15:21:46 [CMD]:vi catalina.out 
+  939  2024-05-09_15:22:02 [CMD]:cd
+  940  2024-05-09_15:22:12 [CMD]:systemctl start tomcat
+  941  2024-05-09_15:22:26 [CMD]:systemctl stop tomcat
+  942  2024-05-09_15:22:32 [CMD]:systemctl start tomcat
+  943  2024-05-09_15:22:36 [CMD]:systemctl status tomcat
+  944  2024-05-09_15:23:45 [CMD]:/usr/local/poscodx/tomcat/bin/startup.sh 
+  945  2024-05-09_15:23:55 [CMD]:ps -ef | grep tomcat
+  946  2024-05-09_15:24:12 [CMD]:/usr/local/poscodx/tomcat/bin/shutdown.sh 
+  947  2024-05-09_15:24:17 [CMD]:ps -ef | grep java
+  948  2024-05-09_15:24:39 [CMD]:systemctl start tomcat
+  949  2024-05-09_15:25:14 [CMD]:journalctl -xeu tomcat.service
+  950  2024-05-09_15:26:07 [CMD]:vi /usr
+  951  2024-05-09_15:26:11 [CMD]:cd /usr
+  952  2024-05-09_15:26:12 [CMD]:cd local/
+  953  2024-05-09_15:26:24 [CMD]:cd
+  954  2024-05-09_15:26:30 [CMD]:cd /usr
+  955  2024-05-09_15:26:32 [CMD]:cd lib
+  956  2024-05-09_15:26:35 [CMD]:cd systemd/
+  957  2024-05-09_15:26:36 [CMD]:cd system
+  958  2024-05-09_15:26:40 [CMD]:vi tomcat.service 
+  959  2024-05-09_15:28:42 [CMD]:systemctl disable tomcat
+  960  2024-05-09_15:28:47 [CMD]:systemctl enable tomcat
+  961  2024-05-09_15:28:57 [CMD]:systemctl start tomcat
+  962  2024-05-09_15:29:07 [CMD]:ps -ef | grep tomcat
+  963  2024-05-09_15:29:16 [CMD]:systemctl status tomcat
+  964  2024-05-09_15:29:45 [CMD]:systemctl disable tomcat
+  965  2024-05-09_15:29:54 [CMD]:vi tomcat.service 
+  966  2024-05-09_15:30:39 [CMD]:systemctl enable tomcat
+  967  2024-05-09_15:30:51 [CMD]:systemctl start tomcat
+  968  2024-05-09_15:30:55 [CMD]:ps -ef | grep java
+  969  2024-05-09_15:31:12 [CMD]:vi tomcat.service 
+  970  2024-05-09_15:31:44 [CMD]:systemctl status tomcat
+  971  2024-05-09_15:34:32 [CMD]:user tomcat
+  972  2024-05-09_15:34:53 [CMD]:vi tomcat.service 
+  973  2024-05-09_15:35:18 [CMD]:systemctl disable tomcat
+  974  2024-05-09_15:35:23 [CMD]:systemctl enable tomcat
+  975  2024-05-09_15:35:32 [CMD]:cd /usr
+  976  2024-05-09_15:35:33 [CMD]:cd local
+  977  2024-05-09_15:35:35 [CMD]:cd poscodx/
+  978  2024-05-09_15:35:53 [CMD]:chown -R tomcat:tomcat apache-tomcat-9.0.89/
+  979  2024-05-09_15:35:55 [CMD]:ls -l
+  980  2024-05-09_15:36:05 [CMD]:systemctl start tomcat
+  981  2024-05-09_15:36:25 [CMD]:vi tomcat.service 
+  982  2024-05-09_15:36:54 [CMD]:vi /usr/lib/systemd/system/tomcat.service 
+  983  2024-05-09_15:37:25 [CMD]:ps -ef | grep tomcat
+  984  2024-05-09_15:39:36 [CMD]:vi /etc/selinux/config 
+  985  2024-05-09_15:41:01 [CMD]:chown -R root:root apache-tomcat-9.0.89/
+  986  2024-05-09_15:41:11 [CMD]:userdel tomcat
+  987  2024-05-09_15:41:17 [CMD]:cd /usr
+  988  2024-05-09_15:41:21 [CMD]:cd lib
+  989  2024-05-09_15:41:24 [CMD]:cd systemd
+  990  2024-05-09_15:41:27 [CMD]:cd system
+  991  2024-05-09_15:41:31 [CMD]:vi tomcat.service 
+  992  2024-05-09_15:41:53 [CMD]:systemctl diable tomcat
+  993  2024-05-09_15:41:56 [CMD]:systemctl disable tomcat
+  994  2024-05-09_15:42:02 [CMD]:systemctl enable tomcat
+  995  2024-05-09_15:42:17 [CMD]:systemctl start tomcat
+  996  2024-05-09_15:42:28 [CMD]:synmc
+  997  2024-05-09_15:42:29 [CMD]:sync
+  998  2024-05-09_15:42:33 [CMD]:reboot
+  999  2024-05-09_16:11:19 [CMD]:cd /usr/local/poscodx/tomcat/conf/
+ 1000  2024-05-09_16:11:20 [CMD]:pw
+ 1001  2024-05-09_16:11:23 [CMD]:pwd
+ 1002  2024-05-09_16:11:35 [CMD]:ls -l
+ 1003  2024-05-09_16:11:45 [CMD]:vi tomcat-users.xml 
+ 1004  2024-05-09_16:13:54 [CMD]:pwd
+ 1005  2024-05-09_16:13:58 [CMD]:cd ..
+ 1006  2024-05-09_16:14:01 [CMD]:ls -l
+ 1007  2024-05-09_16:14:14 [CMD]:cd webapps/
+ 1008  2024-05-09_16:14:16 [CMD]:ls -l
+ 1009  2024-05-09_16:14:28 [CMD]:cd manager/
+ 1010  2024-05-09_16:14:30 [CMD]:ls -l
+ 1011  2024-05-09_16:14:34 [CMD]:cd META-INF/
+ 1012  2024-05-09_16:14:37 [CMD]:ls -l
+ 1013  2024-05-09_16:14:43 [CMD]:vi context.xml 
+ 1014  2024-05-09_16:16:21 [CMD]:systemctl stop tomcat
+ 1015  2024-05-09_16:16:26 [CMD]:ps -ef | grep tomcat
+ 1016  2024-05-09_16:16:33 [CMD]:systemctl start tomcat
+ 1017  2024-05-09_16:16:37 [CMD]:ps -ef | grep tomcat
+ 1018  2024-05-09_16:17:11 [CMD]:cd ..
+ 1019  2024-05-09_16:17:15 [CMD]:clear
+ 1020  2024-05-09_16:17:17 [CMD]:ls -l
+ 1021  2024-05-09_16:23:20 [CMD]:cd
+ 1022  2024-05-09_16:23:22 [CMD]:pwd
+ 1023  2024-05-09_16:23:25 [CMD]:ls -l
+ 1024  2024-05-09_16:23:34 [CMD]:wget https://mirror.navercorp.com/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+ 1025  2024-05-09_16:25:50 [CMD]:wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+ 1026  2024-05-09_16:25:55 [CMD]:ls -l
+ 1027  2024-05-09_16:26:08 [CMD]:tar xvfz apache-maven-3.9.6-bin.tar.gz 
+ 1028  2024-05-09_16:26:26 [CMD]:mv apache-maven-3.9.6 /usr/local/poscodx
+ 1029  2024-05-09_16:26:35 [CMD]:cd /usr/local/poscodx/
+ 1030  2024-05-09_16:26:37 [CMD]:ls -l
+ 1031  2024-05-09_16:26:50 [CMD]:ln -s apache-maven-3.9.6/ maven
+ 1032  2024-05-09_16:26:52 [CMD]:ls -l
+ 1033  2024-05-09_16:27:22 [CMD]:vi /etc/profile
+ 1034  2024-05-09_16:27:47 [CMD]:source /etc/profile
+ 1035  2024-05-09_16:27:51 [CMD]:mvn
+ 1036  2024-05-09_16:27:55 [CMD]:mvn --version
+ 1037  2024-05-09_16:28:05 [CMD]:cd
+ 1038  2024-05-09_16:28:06 [CMD]:ls -la
+ 1039  2024-05-09_16:28:17 [CMD]:cd dowork
+ 1040  2024-05-09_16:28:18 [CMD]:ls -l
+ 1041  2024-05-09_16:29:31 [CMD]:git clone https://github.com/bitacademy-poscodx/java-study.git
+ 1042  2024-05-09_16:29:35 [CMD]:ls -l
+ 1043  2024-05-09_16:29:39 [CMD]:cd java-study/
+ 1044  2024-05-09_16:29:41 [CMD]:ls -l
+ 1045  2024-05-09_16:32:36 [CMD]:mvn clean package
+ 1046  2024-05-09_16:33:55 [CMD]:cd
+ 1047  2024-05-09_16:33:58 [CMD]:ls -la
+ 1048  2024-05-09_16:34:02 [CMD]:ls -a
+ 1049  2024-05-09_16:38:27 [CMD]:ls -l
+ 1050  2024-05-09_16:38:32 [CMD]:cd dowork/
+ 1051  2024-05-09_16:38:33 [CMD]:ls -la
+ 1052  2024-05-09_16:38:37 [CMD]:cd java-study/
+ 1053  2024-05-09_16:38:38 [CMD]:ls -l
+ 1054  2024-05-09_16:38:42 [CMD]:mv clean package
+ 1055  2024-05-09_16:38:47 [CMD]:mvn clean package
+ 1056  2024-05-09_16:39:22 [CMD]:cd network/
+ 1057  2024-05-09_16:39:26 [CMD]:cd target/
+ 1058  2024-05-09_16:39:28 [CMD]:ls -l
+ 1059  2024-05-09_16:41:52 [CMD]:java -cp ./network-0.0.1-SNAPSHOT.jar httpd.SimpleHttpServer
+ 1060  2024-05-09_17:04:31 [CMD]:ls -l
+ 1061  2024-05-09_17:04:54 [CMD]:jar -tf network-0.0.1-SNAPSHOT.jar 
+ 1062  2024-05-09_17:05:32 [CMD]:java network-0.0.1-SNAPSHOT.jar
+ 1063  2024-05-09_17:14:37 [CMD]:history > histoy.20240509.txt
