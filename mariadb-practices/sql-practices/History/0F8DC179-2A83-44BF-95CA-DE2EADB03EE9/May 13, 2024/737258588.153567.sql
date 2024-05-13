@@ -1,0 +1,1 @@
+select version(), CURRENT_DATE, now() from dual;

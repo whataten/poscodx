@@ -1,0 +1,1 @@
+SELECT NAME, species, birth FROM pet WHERE birth >= '1990-2-4';

@@ -1,0 +1,1 @@
+SELECT NAME, birth FROM pet ORDER BY birth asc;

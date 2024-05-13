@@ -1,0 +1,1 @@
+drop table untitled_table_1;

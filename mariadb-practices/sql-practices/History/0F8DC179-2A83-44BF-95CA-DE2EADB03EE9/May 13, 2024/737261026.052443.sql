@@ -1,0 +1,1 @@
+SELECT NAME, species FROM pet WHERE gender='f' AND species='cat';
