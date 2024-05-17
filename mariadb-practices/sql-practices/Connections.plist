@@ -46,7 +46,7 @@
 		<key>ItemGroups</key>
 		<array/>
 		<key>LimitQueryRowsReturned</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>LimitRowsReturned</key>
 		<integer>0</integer>
 		<key>OtherOptions</key>
@@ -289,9 +289,16 @@
 		<key>RecentlyOpened</key>
 		<array/>
 		<key>RecentlySchema</key>
-		<array/>
+		<array>
+			<string>cdmall.cdmall</string>
+		</array>
 		<key>SectionStates</key>
-		<dict/>
+		<dict>
+			<key>cdmall.Functions</key>
+			<string>expanded</string>
+			<key>cdmall.Tables</key>
+			<string>expanded</string>
+		</dict>
 		<key>ServerAddress</key>
 		<string>127.0.0.1</string>
 		<key>ServerPasswordMode</key>

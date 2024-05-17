@@ -679,3 +679,34 @@ select no, email from member;
 -- tx end
 commit;
 select no, email from member;
+
+-- INSERT
+INSERT INTO dept values(null, '디자인팀');
+
+-- SELECT
+SELECT * FROM dept;
+
+-- DELETE
+DELETE FROM dept WHERE no = 7;
+
+-- UPDATE
+UPDATE dept set name='시스템개발' where no = 2;
+
+SELECT
+	emp_no,
+	first_name,
+	last_name
+FROM
+	employees
+WHERE
+	first_name LIKE '%PAT%';
+
+desc emaillist;
+-- Create
+insert into emaillist VALUES(null, '둘', '리', 'dooly@gmail.com');
+
+-- READ
+SELECT no, first_name, last_name, email from emaillist ORDER BY no DESC;
+
+-- DELETE
+DELETE FROM emaillist WHERE email = 'dooly@gmail.com';
