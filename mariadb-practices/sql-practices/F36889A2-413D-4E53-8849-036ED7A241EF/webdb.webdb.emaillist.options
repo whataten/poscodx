@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>columnPosition</key>
+	<dict>
+		<key>email.MS_VAR_STRING.3</key>
+		<integer>3</integer>
+		<key>first_name.MS_VAR_STRING.1</key>
+		<integer>1</integer>
+		<key>last_name.MS_VAR_STRING.2</key>
+		<integer>2</integer>
+		<key>no.MS_LONG.0</key>
+		<integer>0</integer>
+	</dict>
+	<key>columnSize</key>
+	<dict>
+		<key>email.MS_VAR_STRING.3</key>
+		<real>46.5</real>
+		<key>first_name.MS_VAR_STRING.1</key>
+		<real>75.5</real>
+		<key>last_name.MS_VAR_STRING.2</key>
+		<real>73.5</real>
+		<key>no.MS_LONG.0</key>
+		<real>31.5</real>
+	</dict>
+	<key>filterState</key>
+	<string>closed</string>
+	<key>fontSize</key>
+	<integer>12</integer>
+</dict>
+</plist>
