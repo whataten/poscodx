@@ -1,38 +1,69 @@
 package com.emaillist;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.emaillist.dao.EmaillistDao;
+import com.emaillist.vo.EmaillistVo;
+
 public class EmaillistApp {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+	private static Scanner scanner = new Scanner(System.in);
+	private static EmaillistDao emaillistDao = new EmaillistDao();
+	
+	public static void main(String[] args) {
+		while(true) {
+			System.out.print("(l)ist (d)elete (i)nsert (q)uit > ");
+			String command = scanner.nextLine();
+			
+			if("l".equals(command)) {
+				doList();
+			} else if("d".equals(command)) {
+				doDelete();
+			} else if("i".equals(command)) {
+				doInsert();
+			} else if("q".equals(command)) {
+				break;
+			}
+		}
+		
+		if(scanner != null) {
+			scanner.close();
+		}
+	}
 
-        while (true) {
-            System.out.print("(l)ist (d)elete (i)nsert (q)uit > ");
-            String command = scanner.nextLine();
+	private static void doInsert() {
+		System.out.print("성:");
+		String firstName = scanner.nextLine();
 
-            if("l".equals(command)) {
-                doList();
-            } else if ("d".equals(command)) {
-                doDelete();
-            } else if ("i".equals(command)) {
-                doInsert();
-            } else if ("q".equals(command)) {
-                break;
-            }
-        }
+		System.out.print("이름:");
+		String lastName = scanner.nextLine();
 
-        scanner.close();
-    }
+		System.out.print("이메일:");
+		String email = scanner.nextLine();
+		
+		EmaillistVo vo = new EmaillistVo();
+		vo.setFirstName(firstName);
+		vo.setLastName(lastName);
+		vo.setEmail(email);
+		
+		emaillistDao.insert(vo);
+		
+		doList();
+	}
 
-    private static void doInsert() {
-        System.out.println("insert");
-    }
+	private static void doDelete() {
+		System.out.print("이메일:");
+		String email = scanner.nextLine();
+		
+		emaillistDao.deleteByEmail(email);
+		
+		doList();
+	}
 
-    private static void doDelete() {
-        System.out.println("delete");
-    }
-
-    private static void doList() {
-        System.out.println("list");
-    }
+	private static void doList() {
+		List<EmaillistVo> list = emaillistDao.findAll();
+		for(EmaillistVo vo : list) {
+			System.out.println(vo.getFirstName() + " " + vo.getLastName() + ":" + vo.getEmail());
+		}
+	}
 }
