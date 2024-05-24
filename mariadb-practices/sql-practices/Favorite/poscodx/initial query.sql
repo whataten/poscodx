@@ -61,3 +61,11 @@ SELECT NAME FROM pet WHERE NAME LIKE '%fy';
 SELECT NAME FROM pet WHERE NAME LIKE '%p%';
 
 SELECT COUNT(*) from pet;
+
+DROP TABLE cart;
+
+DROP TABLE book;
+
+drop table category;
+drop table orders_book;
+drop table user;

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>columnPosition</key>
+	<dict>
+		<key>book_no.MS_LONG.1</key>
+		<integer>1</integer>
+		<key>quantity.MS_LONG.2</key>
+		<integer>2</integer>
+		<key>user_no.MS_LONG.0</key>
+		<integer>0</integer>
+	</dict>
+	<key>columnSize</key>
+	<dict>
+		<key>book_no.MS_LONG.1</key>
+		<real>64.600869536399841</real>
+		<key>quantity.MS_LONG.2</key>
+		<real>62.244422793388367</real>
+		<key>user_no.MS_LONG.0</key>
+		<real>61.126575708389282</real>
+	</dict>
+	<key>filterState</key>
+	<string>closed</string>
+	<key>fontSize</key>
+	<integer>12</integer>
+</dict>
+</plist>

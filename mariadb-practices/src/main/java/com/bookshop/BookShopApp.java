@@ -13,8 +13,8 @@ public class BookShopApp {
 	private static BookDao bookDao = new BookDao();
 	
 	public static void installDB() {
-		bookDao.deleteAll();
-		authorDao.deleteAll();
+		// bookDao.deleteAll();
+		// authorDao.deleteAll();
 		
 
 //		books[0] = new Book(1, "트와일라잇", "스테파니메이어");
@@ -46,12 +46,12 @@ public class BookShopApp {
 		scanner.close();
 
 		// (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
-		for (Book book : books) {
-			if (num == book.getBookNo()) {
-				book.rent();
-				break;
-			}
-		}
+		// for (Book book : books) {
+		// 	if (num == book.getBookNo()) {
+		// 		book.rent();
+		// 		break;
+		// 	}
+		// }
 
 		// (2) Book 객체의 정보를 출력
 		System.out.println("*****도서 정보 출력하기******");

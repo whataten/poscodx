@@ -710,3 +710,21 @@ SELECT no, first_name, last_name, email from emaillist ORDER BY no DESC;
 
 -- DELETE
 DELETE FROM emaillist WHERE email = 'dooly@gmail.com';
+
+insert into user(name, email, password, phone) values('둘리', 'asdf@gmail.cm', 'asdf', 'asdf');
+
+insert into book(title, price, category_no) values('책', 1234, 1);
+
+insert into guestbook(name, password, contents, reg_date) VALUES('둘리', '1324', '안녕하세요1', '2021-12-01 14:30:15');
+
+insert into guestbook(name, password, contents, reg_date) VALUES('또치', '1324', '안2녕하세요', '2021-12-01 14:30:15');
+
+insert into guestbook(name, password, contents, reg_date) VALUES('마이콜', '1324', '안녕하3세요', '2021-12-01 14:30:15');
+
+select no, name from bookmall order by no desc;
+
+select title from book where no=1;
+
+insert into orders_book values ();
+
+select quantity, price from orders_book where order_no=5 and book_no=13;
