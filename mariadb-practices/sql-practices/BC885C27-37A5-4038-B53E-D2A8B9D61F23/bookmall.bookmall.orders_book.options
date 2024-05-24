@@ -16,13 +16,13 @@
 	<key>columnSize</key>
 	<dict>
 		<key>book_no.MS_LONG.1</key>
-		<real>64.600869536399841</real>
+		<real>64.5</real>
 		<key>order_no.MS_LONG.0</key>
-		<real>66.443702816963196</real>
+		<real>66.5</real>
 		<key>price.MS_LONG.3</key>
-		<real>45.142084002494812</real>
+		<real>45</real>
 		<key>quantity.MS_LONG.2</key>
-		<real>62.244422793388367</real>
+		<real>62</real>
 	</dict>
 	<key>filterState</key>
 	<string>closed</string>
