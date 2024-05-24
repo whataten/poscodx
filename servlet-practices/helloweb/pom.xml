@@ -15,7 +15,7 @@
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-	</properties>	
+	</properties>
 	
 	<dependencies>
 		<!-- servlet -->

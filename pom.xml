@@ -16,6 +16,7 @@
     <module>network</module>
     <module>mariadb-practices</module>
     <module>servlet-practices</module>
+    <module>mysite</module>
   </modules>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
