@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>mysite2</display-name>
+  
+  <!-- common error pages -->
+  <error-page>
+  	<error-code>400</error-code>
+  	<location>/WEB-INF/views/errors/400.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/WEB-INF/views/errors/404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/WEB-INF/views/errors/500.jsp</location>
+  </error-page>
+  
+  <!-- default files -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,12 +25,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- servlet files -->
   <servlet>
     <description></description>
     <display-name>MainServlet</display-name>
     <servlet-name>MainServlet</servlet-name>
     <servlet-class>com.poscodx.mysite.controller.MainServlet</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>MainServlet</servlet-name>
     <url-pattern></url-pattern>
@@ -24,6 +43,7 @@
     <url-pattern>/main</url-pattern>
   </servlet-mapping>
   <servlet>
+  
     <description></description>
     <display-name>UserServlet</display-name>
     <servlet-name>UserServlet</servlet-name>
@@ -33,6 +53,7 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/user</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>GuestbookServlet</display-name>
@@ -42,5 +63,16 @@
   <servlet-mapping>
     <servlet-name>GuestbookServlet</servlet-name>
     <url-pattern>/guestbook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BoardServlet</display-name>
+    <servlet-name>BoardServlet</servlet-name>
+    <servlet-class>com.poscodx.mysite.controller.BoardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardServlet</servlet-name>
+    <url-pattern>/board</url-pattern>
   </servlet-mapping>
 </web-app>
