@@ -182,7 +182,10 @@
 		<array/>
 		<key>RecentlyOpened</key>
 		<array>
+			<string>webdb.webdb.MEMBER</string>
 			<string>webdb.webdb.emaillist</string>
+			<string>webdb.webdb.guestbook</string>
+			<string>webdb.webdb.user</string>
 		</array>
 		<key>RecentlySchema</key>
 		<array>
@@ -409,11 +412,24 @@
 		<key>RecentUsedRestoreOptions</key>
 		<array/>
 		<key>RecentlyOpened</key>
-		<array/>
+		<array>
+			<string>bookmall.bookmall.book</string>
+			<string>bookmall.bookmall.cart</string>
+			<string>bookmall.bookmall.category</string>
+			<string>bookmall.bookmall.orders</string>
+			<string>bookmall.bookmall.orders_book</string>
+		</array>
 		<key>RecentlySchema</key>
-		<array/>
+		<array>
+			<string>bookmall.bookmall</string>
+		</array>
 		<key>SectionStates</key>
-		<dict/>
+		<dict>
+			<key>bookmall.Functions</key>
+			<string>expanded</string>
+			<key>bookmall.Tables</key>
+			<string>expanded</string>
+		</dict>
 		<key>ServerAddress</key>
 		<string>127.0.0.1</string>
 		<key>ServerPasswordMode</key>

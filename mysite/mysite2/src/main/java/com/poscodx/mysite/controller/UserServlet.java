@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.poscodx.mysite.dao.UserDao;
 import com.poscodx.mysite.vo.UserVo;
 
 public class UserServlet extends HttpServlet {
@@ -33,9 +34,8 @@ public class UserServlet extends HttpServlet {
 			vo.setEmail(email);
 			vo.setPassword(passowrd);
 			vo.setGender(gender);
-			
-			System.out.println(vo);
-//			new UserDao().insert(vo);
+
+			new UserDao().insert(vo);
 			
 			response.sendRedirect(request.getContextPath() + "/user?a=joinsuccess");
 			
