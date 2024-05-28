@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.poscodx.mysite.controller.ActionServlet.Action;
 import com.poscodx.mysite.dao.UserDao;
@@ -26,7 +27,11 @@ public class LoginAction implements Action {
 			
 		}
 		
+		//login 처리
+		HttpSession session = request.getSession(true);
+		session.setAttribute("authUser", authUser);
 		
+		// redirect to main
+		response.sendRedirect(request.getContextPath());
 	}
-
 }

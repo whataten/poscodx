@@ -14,7 +14,7 @@ import com.poscodx.mysite.vo.UserVo;
 public class UserDao {
 	public void insert(UserVo vo) {
         try (var conn = MyConnection.getConnection("webdb")) {
-            PreparedStatement pstmt = conn.prepareStatement("INSERT into user VALUES(null, ?, ?, ?, ?, CURRENT_DATE())");
+            PreparedStatement pstmt = conn.prepareStatement("INSERT into user VALUES(null, ?, ?, password(?), ?, CURRENT_DATE())");
             pstmt.setString(1, vo.getName());
             pstmt.setString(2, vo.getEmail());
             pstmt.setString(3, vo.getPassword());
@@ -95,5 +95,10 @@ public class UserDao {
 			}
 		
 		return result;
+	}
+
+	public UserVo findByNo(Long no) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
