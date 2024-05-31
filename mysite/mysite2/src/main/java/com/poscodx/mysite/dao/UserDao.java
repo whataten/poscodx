@@ -26,47 +26,6 @@ public class UserDao {
             e.printStackTrace();
         }
 	}
-//	public List<GuestbookVo> findAll() {
-//		List<GuestbookVo> result = new ArrayList<>();
-//		
-//		try (
-//			Connection conn = MyConnection.getConnection("webdb");
-//			PreparedStatement pstmt = conn.prepareStatement("select no, name, contents, date_format(reg_date, '%Y/%m/%d %H:%i:%s') from guestbook order by reg_date desc");
-//				
-//			ResultSet rs = pstmt.executeQuery();
-//		) {
-//			while(rs.next()) {
-//				Long no = rs.getLong(1);
-//				String name = rs.getString(2);
-//				String contents = rs.getString(3);
-//				String reg_date = rs.getString(4);
-//				
-//				GuestbookVo vo = new GuestbookVo();
-//				vo.setNo(no);
-//				vo.setName(name);
-//				vo.setContents(contents);
-//				vo.setRegDate(reg_date);
-//				
-//				result.add(vo);
-//			}
-//		} catch (SQLException e) {
-//			System.out.println("error:" + e);
-//		}
-//		
-//		return result;
-//	}
-//	
-//	public void delete(Long no, String password) {
-//        try (var conn = MyConnection.getConnection("webdb")) {
-//            PreparedStatement pstmt = conn.prepareStatement("delete from guestbook where no = ? and password = ?");
-//            pstmt.setLong(1, no);
-//            pstmt.setString(2, password);
-//            pstmt.executeUpdate();
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//	}
 
 	public UserVo findByNoAndPassword(String email, String password) {
 		UserVo result = null;
@@ -98,7 +57,28 @@ public class UserDao {
 	}
 
 	public UserVo findByNo(Long no) {
-		// TODO Auto-generated method stub
-		return null;
+		UserVo vo = new UserVo();
+		
+		try (
+			Connection conn = MyConnection.getConnection("webdb");
+			PreparedStatement pstmt = conn.prepareStatement("select name, email, gender from user WHERE no = ?");
+		) {
+			pstmt.setLong(1, no);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				String name = rs.getString(1);
+				String email = rs.getString(2);
+				String gender = rs.getString(3);
+				
+				vo.setNo(no);
+				vo.setName(name);
+				vo.setEmail(email);
+				vo.setGender(gender);
+			}
+		} catch (SQLException e) {
+			System.out.println("here!! :" + e);
+		}
+		
+		return vo;
 	}
 }

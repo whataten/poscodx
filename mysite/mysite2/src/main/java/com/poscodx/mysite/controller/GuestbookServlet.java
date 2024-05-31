@@ -30,7 +30,6 @@ public class GuestbookServlet extends HttpServlet {
 			vo.setContents(contents);
 			vo.setRegDate(reg_date);
 			
-			
 			new GuestbookDao().insert(vo);
 			
 			response.sendRedirect(request.getContextPath() + "/guestbook");

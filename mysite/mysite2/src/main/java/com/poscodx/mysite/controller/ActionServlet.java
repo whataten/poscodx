@@ -23,8 +23,6 @@ public abstract class ActionServlet extends HttpServlet {
 			return;
 		}
 		
-		
-		
 		action.excute(req, resp);
 	}
 
