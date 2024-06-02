@@ -27,12 +27,14 @@
 						<th>작성일</th>
 						<th>&nbsp;</th>
 					</tr>
-					<c:forEach items="${boardList }" var="vo">
-				    <%-- <c:forEach var="posting" items="${requestScope.list }"> --%>
+					<c:forEach items="${boardList }" var="vo" varStatus="status">
 						<tr>
-							<td>${vo.no }</td>
-							<td><a href="${pageContext.request.contextPath }/board?a=view&no=${vo.no}&g_no=${vo.groupNo}&depth=${vo.depth}&authorNo=${vo.userNo}&content=${vo.contents}&title=${vo.title}" class="edit">${vo.title }</a></td>
-							<%-- <td style='text-align:left; padding-left:${20*vo.depth}20px'><a href="${vo.title }"></a></td> --%>
+							<td>${vo.no - status.index }</td>
+							<td style="text-align: left; padding-left: ${20*vo.depth }px">
+								<c:if test="${vo.depth > 0 }">
+										<img src="${pageContext.servletContext.contextPath }/assets/images/reply.png">
+								</c:if>
+								<a href="${pageContext.request.contextPath }/board?a=view&no=${vo.no}" class="edit">${vo.title }</a></td>
 							<td>${vo.name }</td>
 							<td>${vo.hit }</td>
 							<td>${vo.regDate }</td>
@@ -46,16 +48,43 @@
 				</table>
 				<!-- pager 추가 -->
 				<div class="pager">
-					<ul>
-						<li><a href="">◀</a></li>
-						<li><a href="">1</a></li>
-						<li class="selected">2</li>
-						<li><a href="">3</a></li>
-						<li>4</li>
-						<li>5</li>
-						<li><a href="">▶</a></li>
-					</ul>
-				</div>			
+			        <ul>
+			            <li>
+			                <c:choose>
+			                    <c:when test="${page > 1}">
+			                        <a href="?page=${page - 1}">◀</a>
+			                    </c:when>
+			                    <c:otherwise>
+			                        <span class="disabled">◀</span>
+			                    </c:otherwise>
+			                </c:choose>
+			            </li>
+			
+			            <c:forEach var="i" begin="1" end="5">
+			                <li>
+			                    <c:choose>
+			                        <c:when test="${i == page}">
+			                            <span class="selected">${i}</span>
+			                        </c:when>
+			                        <c:otherwise>
+			                            <a href="?page=${i}">${i}</a>
+			                        </c:otherwise>
+			                    </c:choose>
+			                </li>
+			            </c:forEach>
+			
+			            <li>
+			                <c:choose>
+			                    <c:when test="${page < totalPages}">
+			                        <a href="?page=${page + 1}">▶</a>
+			                    </c:when>
+			                    <c:otherwise>
+			                        <span class="disabled">▶</span>
+			                    </c:otherwise>
+			                </c:choose>
+			            </li>
+			        </ul>
+			    </div>		
 				<!-- pager 추가 -->
 				
 				<div class="bottom">

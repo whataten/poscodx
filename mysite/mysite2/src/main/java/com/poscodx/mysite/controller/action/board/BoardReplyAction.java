@@ -8,19 +8,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.poscodx.mysite.controller.ActionServlet.Action;
 import com.poscodx.mysite.dao.BoardDao;
-import com.poscodx.mysite.vo.BoardVo;
+import com.poscodx.mysite.vo.UserVo;
 
-public class BoardEditFormAction implements Action {
+public class BoardReplyAction implements Action {
 
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String no = request.getParameter("no");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
 		
-		BoardVo vo = new BoardDao().findByNo(Long.valueOf(no));
+		UserVo vo = (UserVo) request.getSession().getAttribute("authUser");
+
+		new BoardDao().reply(title, content, vo.getNo(), no);
+		response.sendRedirect(request.getContextPath() + "/board");
 		
-		request.setAttribute("vo", vo);
-		
-		request.getRequestDispatcher("/WEB-INF/views/board/modify.jsp").forward(request, response);
+
 	}
 
 }

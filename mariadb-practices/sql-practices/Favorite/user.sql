@@ -26,3 +26,5 @@ INSERT INTO board VALUES(NULL, 'title', 'content', 0, CURRENT_DATE(), 0, 0, 0, 1
 DELETE from board where no = 2;
 
 UPDATE board SET title = 'wwwwwwww', contents='wwwwwwwz', reg_date=NOW() WHERE no = 3;
+
+INSERT INTO board VALUES(NULL, 'title', 'content', 0, CURRENT_DATE(), g_no, o_no, 0, 1);

@@ -9,6 +9,8 @@ import com.poscodx.mysite.controller.action.board.BoardDeleteAction;
 import com.poscodx.mysite.controller.action.board.BoardEditAction;
 import com.poscodx.mysite.controller.action.board.BoardEditFormAction;
 import com.poscodx.mysite.controller.action.board.BoardFormAction;
+import com.poscodx.mysite.controller.action.board.BoardReplyAction;
+import com.poscodx.mysite.controller.action.board.BoardReplyFormAction;
 
 public class BoardServlet extends ActionServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,7 +22,9 @@ public class BoardServlet extends ActionServlet {
 			"write", new BoardWriteAction(),
 			"delete", new BoardDeleteAction(),
 			"editform", new BoardEditFormAction(),
-			"edit", new BoardEditAction()
+			"edit", new BoardEditAction(),
+			"replyform", new BoardReplyFormAction(),
+			"reply", new BoardReplyAction()
 		);
 	
 	@Override

@@ -21,18 +21,31 @@
 					</tr>
 					<tr>
 						<td class="label">제목</td>
-						<td>${title }</td>
+						<td>${vo.title }</td>
 					</tr>
 					<tr>
 						<td class="label">내용</td>
 						<td>
-							<div class="view-content">${content }</div>
+							<div class="view-content">${vo.content }</div>
 						</td>
 					</tr>
 				</table>
 				<div class="bottom">
 					<a href="${pageContext.servletContext.contextPath }/board">글목록</a>
-					<a href="${pageContext.servletContext.contextPath }/board?a=editform&no=${boardNo}">글수정</a>
+				<c:if test="${not empty authUser }">
+    				<a href="${pageContext.servletContext.contextPath }/board?a=replyform&no=${vo.no}">답글쓰기</a>
+				</c:if>
+				<c:if test="${vo.userNo == authUser.no }">
+    				<a href="${pageContext.servletContext.contextPath }/board?a=editform&no=${vo.no}">글수정</a>
+				</c:if>
+<%-- 				<c:choose>
+					<c:when test="${not empty authUser }">
+						<a href="${pageContext.servletContext.contextPath }/board?a=replyform&no=${vo.no}">답글쓰기</a>
+					</c:when>
+					<c:when test='${vo.userNo == authUser.no }'>
+						<a href="${pageContext.servletContext.contextPath }/board?a=editform&no=${vo.no}">글수정</a>						
+					</c:when>
+				</c:choose> --%>
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,7 @@ package com.poscodx.mysite.vo;
 public class BoardVo {
 	private Long no;
 	private String title;
-	private String contents;
+	private String content;
 	private int hit;
 	private String regDate;
 	private int groupNo;
@@ -18,11 +18,11 @@ public class BoardVo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getContents() {
-		return contents;
+	public String getContent() {
+		return content;
 	}
-	public void setContents(String contents) {
-		this.contents = contents;
+	public void setContents(String content) {
+		this.content = content;
 	}
 	
 	public Long getNo() {

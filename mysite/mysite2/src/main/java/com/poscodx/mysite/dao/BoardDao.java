@@ -38,11 +38,74 @@ public class BoardDao {
         }
 	}
 	
+	// BoardDao.java 수정
+	public void reply(String title, String content, Long authorNo, String no) {
+	    // 1. no로 원글에 대한 정보 (o_no, g_no, depth)를 가져옴
+	    BoardVo vo = findByNo(Long.valueOf(no));
+
+	    int g_no = vo.getGroupNo();
+	    int o_no = vo.getOrderNo(); // 답글의 orderNo는 원글의 orderNo보다 커야 하므로 +1
+	    int depth = vo.getDepth() + 1;  // 답글이므로 depth를 1 증가
+
+	    try (var conn = MyConnection.getConnection("webdb")) {
+	        // 2. 해당 g_no에 속하면서 원글의 o_no보다 크거나 같은 모든 글의 o_no를 하나씩 더하고
+	        PreparedStatement pstmt1 = conn.prepareStatement("UPDATE board SET o_no = o_no + 1 WHERE g_no = ? AND o_no >= ?");
+	        pstmt1.setInt(1, g_no);
+	        pstmt1.setInt(2, o_no);
+	        pstmt1.executeUpdate();
+	        pstmt1.close(); // 리소스 닫기
+
+	        // 3. 답글을 추가
+	        PreparedStatement pstmt2 = conn.prepareStatement("INSERT INTO board (no, title, contents, hit, reg_date, g_no, o_no, depth, user_no) VALUES (null, ?, ?, 0, now(), ?, ?, ?, ?)");
+	        pstmt2.setString(1, title);
+	        pstmt2.setString(2, content);
+	        pstmt2.setInt(3, g_no);
+	        pstmt2.setInt(4, o_no);
+	        pstmt2.setInt(5, depth);
+	        pstmt2.setLong(6, authorNo);
+	        pstmt2.executeUpdate();
+	        pstmt2.close(); // 리소스 닫기
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	
+//	public void reply(String title, String content, Long authorNo, String no) {
+//		
+//		// 1. no로 원글에 대한 정보 (o_no, g_no, depth)를 가져옴
+//		BoardVo vo = findByNo(Long.valueOf(no));
+//		
+//		int g_no = vo.getGroupNo();
+//		int o_no = vo.getOrderNo();
+//		System.out.println(vo.getTitle() + ":::" + vo.getDepth());
+//		int depth = vo.getDepth();
+//		
+//		try (var conn = MyConnection.getConnection("webdb")) {
+//			// 2. 해당 g_no에 속하면서 원글의 o_no보다 크거나 같은 모든 글의 o_no를 하나씩 더하고
+//            PreparedStatement pstmt1 = conn.prepareStatement("UPDATE board set o_no = o_no + 1 where g_no = ? and o_no >= ?");
+//            pstmt1.setInt(1, g_no);
+//            pstmt1.setInt(2, o_no);
+//            pstmt1.executeUpdate();
+//            
+//            PreparedStatement pstmt2 = conn.prepareStatement("INSERT INTO board VALUES(NULL, ?, ?, 0, now(), ?, ?, ?, ?)");
+//            pstmt2.setString(1, title);
+//            pstmt2.setString(2, content);
+//            pstmt2.setInt(3, g_no);
+//            pstmt2.setInt(4, o_no);
+//            pstmt2.setInt(5, depth + 1);
+//            pstmt2.setLong(6, authorNo);
+//            pstmt2.executeUpdate();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//	}
+	
 	public List<BoardVo> findByPage(int page) {
 		List<BoardVo> result = new ArrayList<>();
 		
         try (var conn = MyConnection.getConnection("webdb");
-            PreparedStatement pstmt = conn.prepareStatement("SELECT title, contents, hit, date_format(reg_date, '%Y/%m/%d %H:%i:%s'), g_no, o_no, depth, user_no, name, b.no from board b join user u on b.user_no = u.no ORDER BY g_no DESC, o_no ASC LIMIT ?, 5;");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT title, contents, hit, date_format(reg_date, '%Y/%m/%d %H:%i:%s'), g_no, o_no, depth, user_no, name, b.no from board b join user u on b.user_no = u.no ORDER BY g_no DESC, o_no DESC LIMIT ?, 5;");
         ) {
         	pstmt.setInt(1, (page - 1) * 5);
         	ResultSet rs = pstmt.executeQuery();
@@ -84,7 +147,7 @@ public class BoardDao {
 		BoardVo result = new BoardVo();
 		
 		try (var conn = MyConnection.getConnection("webdb");
-	            PreparedStatement pstmt = conn.prepareStatement("SELECT title, contents, userNo from board where no = ?");
+	            PreparedStatement pstmt = conn.prepareStatement("SELECT title, contents, depth, user_no from board where no = ?");
 	        ) {
 	        	pstmt.setLong(1, no);
 	        	ResultSet rs = pstmt.executeQuery();
@@ -92,10 +155,13 @@ public class BoardDao {
 				if (rs.next()) {
 					String title = rs.getString(1);
 					String contents = rs.getString(2);
-					Long userNo = Long.valueOf(rs.getString(3));
+					int depth = rs.getInt(3);
+					Long userNo = Long.valueOf(rs.getString(4));
 					
+					result.setNo(no);
 					result.setTitle(title);
 					result.setContents(contents);
+					result.setDepth(depth);
 					result.setUserNo(userNo);
 				}
 				
