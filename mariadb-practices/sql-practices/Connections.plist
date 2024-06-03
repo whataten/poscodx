@@ -182,6 +182,7 @@
 		<array/>
 		<key>RecentlyOpened</key>
 		<array>
+			<string>webdb.webdb.board</string>
 			<string>webdb.webdb.MEMBER</string>
 			<string>webdb.webdb.emaillist</string>
 			<string>webdb.webdb.guestbook</string>
