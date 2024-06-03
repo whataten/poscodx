@@ -1,6 +1,13 @@
 package com.poscodx.mysite.vo;
 
 public class UserVo {
+	private Long no;
+	private String name;
+	private String email;
+	private String password;
+	private String gender;
+	private String joinDate;
+	
 	public Long getNo() {
 		return no;
 	}
@@ -22,11 +29,6 @@ public class UserVo {
 	public String getPassword() {
 		return password;
 	}
-	@Override
-	public String toString() {
-		return "UserVo [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", gender="
-				+ gender + ", joinDate=" + joinDate + "]";
-	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -42,10 +44,9 @@ public class UserVo {
 	public void setJoinDate(String joinDate) {
 		this.joinDate = joinDate;
 	}
-	private Long no;
-	private String name;
-	private String email;
-	private String password;
-	private String gender;
-	private String joinDate;
+	@Override
+	public String toString() {
+		return "UserVo [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", gender="
+				+ gender + ", joinDate=" + joinDate + "]";
+	}
 }
