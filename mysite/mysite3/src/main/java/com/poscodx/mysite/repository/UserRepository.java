@@ -1,4 +1,4 @@
-package com.poscodx.mysite.dao;
+package com.poscodx.mysite.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.stereotype.Repository;
+
+import com.poscodx.mysite.exception.UserRepositoryException;
 import com.poscodx.mysite.vo.UserVo;
 
-public class UserDao {
+@Repository
+public class UserRepository {
 	private Connection getConnection() throws SQLException {
 		Connection conn = null;
 
@@ -49,7 +53,7 @@ public class UserDao {
 		return result;		
 	}
 
-	public UserVo findByNoAndPassword(String email, String password) {
+	public UserVo findByEmailAndPassword(String email, String password) {
 		UserVo result = null;
 		
 		try (
@@ -71,7 +75,7 @@ public class UserDao {
 			}
 			rs.close();
 		} catch (SQLException e) {
-			System.out.println("Error:" + e);
+			throw new UserRepositoryException(e.toString());
 		}		
 		
 		return result;

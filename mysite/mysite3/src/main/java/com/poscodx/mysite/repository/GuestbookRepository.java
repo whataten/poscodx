@@ -1,4 +1,4 @@
-package com.poscodx.mysite.dao;
+package com.poscodx.mysite.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,10 +8,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.poscodx.mysite.vo.GuestbookVo;
 
 
-public class GuestbookDao {
+@Repository
+public class GuestbookRepository {
 	public int deleteByNoAndPassword(Long no, String password) {
 		int result = 0;
 		
@@ -31,7 +34,6 @@ public class GuestbookDao {
 	
 	public int insert(GuestbookVo vo) {
 		int result = 0;
-		
 		
 		try (
 			Connection conn = getConnection();
