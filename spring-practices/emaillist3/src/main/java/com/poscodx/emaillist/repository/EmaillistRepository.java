@@ -8,12 +8,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import emaillist.vo.EmaillistVo;
 
 @Repository
 public class EmaillistRepository {
+	@Autowired
+	private DataSource dataSource;
 
 	public boolean insert(EmaillistVo vo) {
 		boolean result = false;
@@ -26,7 +30,7 @@ public class EmaillistRepository {
 			
 			//2. 연결하기
 			String url = "jdbc:mariadb://192.168.64.2:3306/webdb?charset=utf8";
-			conn = DriverManager.getConnection(url, "webdb", "webdb");
+			conn = dataSource.getConnection();
 
 			//3. Statement 준비
 			String sql = "insert into emaillist values(null, ?, ?, ?)";
