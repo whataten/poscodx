@@ -23,7 +23,7 @@
 	<delete id="deleteByNoAndPassword" parameterType="map">
 		<![CDATA[
 			delete from guestbook 
-			where no = #{no} and password = #{password}
+			where no=#{no} and password=#{password}
 		]]>	
 	</delete>
 </mapper>

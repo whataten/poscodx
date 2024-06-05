@@ -48,7 +48,6 @@ public class UserController {
 			return "user/login";
 		}
 		
-		// login 처리
 		session.setAttribute("authUser", authUser);
 		
 		return "redirect:/";
@@ -68,7 +67,6 @@ public class UserController {
 		if(authUser == null) {
 			return "redirect:/";
 		}
-		////////////////////////
 		
 		UserVo vo = userService.getUser(authUser.getNo());
 		model.addAttribute("userVo", vo);
@@ -83,13 +81,11 @@ public class UserController {
 		if(authUser == null) {
 			return "redirect:/";
 		}
-		////////////////////////
 
 		vo.setNo(authUser.getNo());
 		userService.update(vo);
 		
 		authUser.setName(vo.getName());
-		return "redirect:/user/update";
+		return "redirect:/user/update?result=success";
 	}
-	
 }
