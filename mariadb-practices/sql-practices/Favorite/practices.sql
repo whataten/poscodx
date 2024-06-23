@@ -730,3 +730,5 @@ insert into orders_book values ();
 select quantity, price from orders_book where order_no=5 and book_no=13;
 
 select no, name, contents, date_format(reg_date, '%Y/%m/%d %H:%i:%s') from guestbook order by reg_date desc;
+
+select CURRENT_DATE();

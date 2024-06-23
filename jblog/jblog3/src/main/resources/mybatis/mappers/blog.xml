@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="blog">
+	<insert id="insert" parameterType="string">
+		<![CDATA[
+		INSERT
+		  INTO blog
+		VALUES (#{id}, CONCAT(#{id}, "'s blog"), 'logo.jpg')
+		]]>
+	</insert>
+	<select id="getPosts" parameterType="map" resultType="postvo">
+		<![CDATA[
+		SELECT p.*
+		  FROM post p
+		  JOIN category c ON p.category_no = c.no
+		  JOIN blog b ON c.id = b.id
+		  WHERE b.id = #{id} AND c.no = #{categoryNo}
+		]]>  
+	</select>
+	<select id="getPost" parameterType="map" resultType="postvo">
+		<![CDATA[
+		  SELECT *
+			FROM post
+		   WHERE post.no = #{postNo}
+		     AND post.category_no IN (
+	      SELECT category.no
+		    FROM category
+	       WHERE category.id = #{id} AND category.no = #{categoryNo}
+		    	 )
+		]]>  
+	</select>
+	<select id="getCategories" parameterType="string" resultType="categoryvo">
+		<![CDATA[
+		  SELECT *
+			FROM category
+		   WHERE id = #{id}
+		]]>  
+	</select>
+		<select id="getContents" parameterType="string" resultType="blogvo">
+		<![CDATA[
+		  SELECT *
+			FROM blog
+		   WHERE id = #{id}
+		]]>
+	</select>
+	<update id="update" parameterType="blogvo">
+		<choose>
+			<when test='title == "" and logo != ""'>
+				<![CDATA[
+				UPDATE blog
+				   SET logo=#{logo }
+				 WHERE id=#{id }
+				]]>
+			</when>
+			<when test='title != "" and logo == ""'>
+				<![CDATA[
+				UPDATE blog
+				   SET title=#{title }
+				 WHERE id=#{id }
+				]]>
+			</when>
+			<otherwise>
+				<![CDATA[
+				UPDATE blog
+				   SET title=#{title }, logo=#{logo }
+				 WHERE id=#{id }
+				]]>
+			</otherwise>
+		</choose>
+	</update>
+	<delete id="deletePostsByCategory" parameterType="string">
+		<![CDATA[
+		delete
+		  from post
+		 where category_no = #{no }
+		]]>
+	</delete>
+	<delete id="deleteCategory" parameterType="string">
+		<![CDATA[
+		delete
+		  from category
+		 where no = #{no }
+		]]>
+	</delete>
+	<insert id="addCategory" parameterType="map">
+		<![CDATA[
+		INSERT
+		  INTO category
+		VALUES (null, #{categoryName}, #{description}, current_date(), #{id})
+		]]>
+	</insert>
+	<select id="getCategoryNo" parameterType="string" resultType="int">
+		<![CDATA[
+		SELECT no
+		  FROM category
+		 WHERE name = #{category}
+		]]>
+	</select>
+	<insert id="addPost" parameterType="map">
+		<![CDATA[
+		INSERT
+		  INTO post
+		VALUES (null, #{title}, #{content}, current_date(), #{category})
+		]]>
+	</insert>
+</mapper>

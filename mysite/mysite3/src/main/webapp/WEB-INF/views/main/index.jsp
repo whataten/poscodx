@@ -15,11 +15,14 @@
 		<div id="wrapper">
 			<div id="content">
 				<div id="site-introduction">
-					<img id="profile" src="${pageContext.request.contextPath}/assets/images/me.webp" style='width: 250px'>
-					<h2>안녕하세요. 천민서의 미니홈피에 오신 것을 환영합니다.</h2>
+					<img id="profile" src="${pageContext.request.contextPath }${sitevo.profile }" style="width:420px">
+					<h2>
+						${sitevo.welcome }
+					</h2>
 					<p>
-						방명록 남겨주세요~!<br><br>
-						<a href="${pageContext.request.contextPath}/guestbook">방명록</a>에 글 남기기<br>
+						${fn:replace(sitevo.description, newline, "<br>") }
+						<br><br>
+						<a href="${pageContext.request.contextPath }/guestbook">방명록</a>에 글 남기기<br>
 					</p>
 				</div>
 			</div>

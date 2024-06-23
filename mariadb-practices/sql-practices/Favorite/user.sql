@@ -28,3 +28,5 @@ DELETE from board where no = 2;
 UPDATE board SET title = 'wwwwwwww', contents='wwwwwwwz', reg_date=NOW() WHERE no = 3;
 
 INSERT INTO board VALUES(NULL, 'title', 'content', 0, CURRENT_DATE(), g_no, o_no, depth=depth + 1, authUser);
+
+INSERT INTO site VALUES(NULL, 'title', 'welcome', 'profile', 'description');

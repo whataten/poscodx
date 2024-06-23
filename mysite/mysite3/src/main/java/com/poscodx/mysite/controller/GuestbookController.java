@@ -20,11 +20,12 @@ public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
 	
+	
 	@RequestMapping("")
 	public String index(Model model) {
 		List<GuestbookVo> list = guestbookService.getContentsList();
 		model.addAttribute("list", list);
-		return "guestbook/list";
+		return "guestbook/index";
 	}
 	
 	@RequestMapping("/add")

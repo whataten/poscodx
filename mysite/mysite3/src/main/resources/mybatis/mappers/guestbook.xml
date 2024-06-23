@@ -3,27 +3,40 @@
 
 <mapper namespace="guestbook">
 	<select id="findAll" resultType="guestbookvo">
-	<![CDATA[
-		select no, name, contents, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as regDate
-		from guestbook 
+		<![CDATA[	
+		  select no, name, contents, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as regDate
+		    from guestbook
 		order by reg_date desc
-	]]>
+		]]>  
 	</select>
-	<insert id="insert" parameterType="guestbookvo">
-	<![CDATA[
-		insert into guestbook 
-		values(null, #{name}, #{password}, #{contents}, now())
-	]]>
-	<selectKey keyProperty="no" resultType="long" order="AFTER">
+
+	<select id="findByNo" parameterType="long" resultType="guestbookVo">
 		<![CDATA[
+		  select no, name, contents, date_format(reg_date, '%Y-%m-%d') as regDate
+		    from guestbook
+		   where no = #{no }
+		]]>
+	</select>
+	
+	<insert id="insert" parameterType="guestbookvo">
+		<![CDATA[
+		insert
+		  into guestbook
+		values (null, #{name }, #{password }, #{contents }, now())	
+		]]>
+		<selectKey keyProperty="no" resultType="long" order="AFTER">
+			<![CDATA[
 			select last_insert_id() from dual
-		]]>	
-	</selectKey>
+			]]>
+		</selectKey>
 	</insert>
+	
 	<delete id="deleteByNoAndPassword" parameterType="map">
 		<![CDATA[
-			delete from guestbook 
-			where no=#{no} and password=#{password}
-		]]>	
+		delete
+		  from guestbook
+		 where no = #{no }
+		   and password = #{password }
+		]]>
 	</delete>
 </mapper>
