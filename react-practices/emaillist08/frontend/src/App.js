@@ -13,7 +13,7 @@ function App(props) {
     ];
     
     return (
-        <div className={_App}>
+        <div id={_App}>
             <RegisterForm></RegisterForm>
             <SearchBar></SearchBar>
             <Emaillist forms={forms}></Emaillist>
