@@ -20,11 +20,11 @@ module.exports = function(env) {
             }, {
                 test: /\.(c|sa|sc)ss$/i,
                 use:[
-                    'style-loader', 
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: env['css-module'] !== 'false'
+                            modules: true
                         }
                     }, 
                     'sass-loader'

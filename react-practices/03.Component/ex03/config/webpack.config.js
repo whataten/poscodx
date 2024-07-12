@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve(`src/index.js`),
+        entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
             filename: 'assets/js/main.js',
@@ -20,11 +20,11 @@ module.exports = function(env) {
             }, {
                 test: /\.(c|sa|sc)ss$/i,
                 use:[
-                    'style-loader', 
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: env['css-module'] !== 'false'
+                            modules: true
                         }
                     }, 
                     'sass-loader'
