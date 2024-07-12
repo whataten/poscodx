@@ -45,3 +45,17 @@ console.log("o:" + typeof(o));
 var i2 = new Number(10);
 console.log("i2:" + typeof(i2));
 
+console.log("=== 객체 타입(function) ===");
+function f1(a, b) {
+    return a + b;
+}
+
+var f2 = function(a, b) {
+
+}
+
+var f3 = new Function('a', 'b', 'return a + b');
+
+console.log(typeof(f1));
+console.log(typeof(f2));
+console.log(typeof(f3));

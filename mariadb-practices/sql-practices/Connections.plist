@@ -532,11 +532,23 @@
 		<key>RecentUsedRestoreOptions</key>
 		<array/>
 		<key>RecentlyOpened</key>
-		<array/>
+		<array>
+			<string>jblog.jblog.post</string>
+			<string>jblog.jblog.blog</string>
+			<string>jblog.jblog.category</string>
+			<string>jblog.jblog.user</string>
+		</array>
 		<key>RecentlySchema</key>
-		<array/>
+		<array>
+			<string>jblog.jblog</string>
+		</array>
 		<key>SectionStates</key>
-		<dict/>
+		<dict>
+			<key>jblog.Functions</key>
+			<string>expanded</string>
+			<key>jblog.Tables</key>
+			<string>expanded</string>
+		</dict>
 		<key>ServerAddress</key>
 		<string>127.0.0.1</string>
 		<key>ServerPasswordMode</key>
