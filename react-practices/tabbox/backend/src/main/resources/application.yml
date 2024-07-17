@@ -19,6 +19,16 @@ spring:
       resources:
          static-locations: classpath:/assets/ 	  
 
+   # datasource
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.0.203:3306/webdb?charset=utf8
+      username: webdb
+      password: webdb
+      hikari:
+         minimum-idle: 10
+         maximum-pool-size: 20  
+
    thymeleaf:      
       check-template-location: true
       enable-spring-el-compiler: true	  
