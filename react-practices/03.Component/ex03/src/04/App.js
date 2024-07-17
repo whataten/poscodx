@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './assets/images/react-logo.png';
 
 export default function App() {
+
+    const onClickImg = (e) => {
+        console.log("asdfasdf");
+    }
+
     return (
         <>
             <h2>Event Handler  예제</h2>
@@ -16,7 +21,9 @@ export default function App() {
                     width: 190,
                     border: '1px solid #ccc'
                 } }
-                src={logo} />
+                src={logo}
+                onClick={onClickImg}
+                />
         </>
     );
 }

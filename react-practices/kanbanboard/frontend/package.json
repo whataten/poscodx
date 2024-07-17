@@ -1,10 +1,10 @@
 {
-  "name": "ex02",
+  "name": "emaillist08",
   "version": "1.0.0",
-  "description": "Component Styling",
+  "description": "Emaillist React Component",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack serve --config config/webpack.config.js --progress --mode development --env",
+    "start": "npx webpack serve --config config/webpack.config.js --progress --mode development",
     "build": "npm install && npx webpack --config config/webpack.config.js --mode production"
   },
   "keywords": [],
@@ -13,9 +13,10 @@
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
+    "react-addons-update": "^15.6.3",
     "react-dom": "^18.3.1",
     "sass": "^1.77.8",
-    "styled-components": "^6.1.11"
+    "styled-component": "^2.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",

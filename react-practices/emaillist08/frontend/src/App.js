@@ -2,7 +2,7 @@ import React from 'react';
 import RegisterForm from './RegisterForm';
 import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
-import {_App} from './assets/scss/App.scss';
+import './assets/scss/App.scss';
 
 function App(props) {
     const forms = [
@@ -13,7 +13,7 @@ function App(props) {
     ];
     
     return (
-        <div id={_App}>
+        <div id={'_App'}>
             <RegisterForm></RegisterForm>
             <SearchBar></SearchBar>
             <Emaillist forms={forms}></Emaillist>
