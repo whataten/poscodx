@@ -22,20 +22,23 @@ spring:
    # datasource
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
-      url: jdbc:mariadb://192.168.0.203:3306/webdb?charset=utf8
+      url: jdbc:mariadb://192.168.64.2:3306/webdb?charset=utf8
       username: webdb
       password: webdb
       hikari:
          minimum-idle: 10
-         maximum-pool-size: 20  
+         maximum-pool-size: 20
 
    thymeleaf:      
       check-template-location: true
       enable-spring-el-compiler: true	  
       mode: HTML
-      prefix: classpath:templates/      	  
+      prefix: classpath:templates/
       suffix : .html
-      
+
+# mybatis
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
 
 server:
    error:
