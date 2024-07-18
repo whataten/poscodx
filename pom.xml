@@ -20,6 +20,7 @@
     <module>spring-practices</module>
     <module>jblog</module>
     <module>springboot-practices</module>
+    <module>emaillist8</module>
   </modules>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
