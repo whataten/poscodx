@@ -1,14 +1,27 @@
-import React from 'react';
-import {_RegisterForm} from './assets/scss/RegisterForm.scss'
+import React, {useRef} from 'react';
+import * as styles from './assets/scss/RegisterForm.scss';
 
-function RegisterForm() {
+function RegisterForm({addEmail}) {
+    const refForm = useRef(null);
+
     return (
-        <form className={_RegisterForm}>
-            <input type='text' name='firstName' placeholder='성' class="InputFirstName" />
-            <input type='text' name='lastName' placeholder='이름' class="InputLastName" />
-            <input type='text' name='email' placeholder='이메일' class="InputEmail" />
+        <form
+            ref={refForm}
+            className={styles.Register_Form}
+            onSubmit={(e) => {
+                e.preventDefault();
+                addEmail({
+                     firstName: e.target.firstName.value,
+                     lastName: e.target.lastName.value,
+                     email: e.target.email.value
+                });
+                refForm.current.reset();
+            }}>
+            <input type='text' name='firstName' placeholder='성' className={styles.Input_First_Name} />
+            <input type='text' name='lastName' placeholder='이름' className={styles.Input_Last_Name} />
+            <input type='text' name='email' placeholder='이메일' className={styles.Input_Email} />
             <input type='submit' value='등록' />
-        </form>
+        </form> 
     );
 }
 

@@ -1,11 +1,20 @@
-import React from "react";
-import EmailForm from "./EmailForm";
-import {_Emaillist} from './assets/scss/Emaillist.scss';
+import React from 'react';
+import {Email_List} from './assets/scss/Emaillist.scss';
+import Email from './Email';
 
-function Emaillist({forms}) {
+function Emaillist({emails}) {
     return (
-        <ul className={_Emaillist}>
-            {forms.map(t => <EmailForm name={t.name} email={t.email}/>)};
+        <ul className={Email_List}>
+            {
+
+                    emails?.map(email => <Email
+                                            key={email.no}
+                                            no={email.no}
+                                            firstName={email.firstName}
+                                            lastName={email.lastName}
+                                            email={email.email} />)
+
+            }
         </ul>
     );
 }
