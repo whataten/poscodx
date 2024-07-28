@@ -16,13 +16,13 @@
 	<key>columnSize</key>
 	<dict>
 		<key>email.MS_VAR_STRING.3</key>
-		<real>72.24609375</real>
+		<real>72</real>
 		<key>first_name.MS_VAR_STRING.1</key>
-		<real>108.369140625</real>
+		<real>108</real>
 		<key>last_name.MS_VAR_STRING.2</key>
-		<real>73.5</real>
+		<real>74</real>
 		<key>no.MS_LONG.0</key>
-		<real>31.5</real>
+		<real>32</real>
 	</dict>
 	<key>filterState</key>
 	<string>closed</string>
