@@ -2,14 +2,14 @@ package com.poscodx.kanbanboard.vo;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
+import lombok.to_string;
 
 @Getter
 @Setter
-@ToString
-public class TaskVo {
+@to_string
+public class task_vo {
 	private Long no;
 	private String name;
 	private String done;
-	private Long cardNo;
+	private Long card_no;
 }

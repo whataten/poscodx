@@ -22,13 +22,13 @@ spring:
    thymeleaf:      
       check-template-location: true
       enable-spring-el-compiler: true	  
-      mode: HTML
+      mode: html
       prefix: classpath:templates/      	  
       suffix : .html
 
    datasource:
       driver-class-name: org.h2.Driver
-      url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MODE=MYSQL
+      url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;mode=mysql
       username: sa
       password:
 
@@ -74,9 +74,9 @@ server:
     
 logging:
    pattern:
-      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+      console: "%d{hh:mm:ss.sss} [%thread] %-5level %logger{5} - %msg%n"
    level:
-      root: INFO
+      root: info
 
 
 
@@ -95,17 +95,17 @@ server:
 
 logging:
    pattern:
-      file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+      file: "%d{hh:mm:ss.sss} [%thread] %-5level %logger{5} - %msg%n"
    logback:
       rollingpolicy:
-         file-name-pattern: "logs/${spring.application.name}.%d{yyyy-MM-dd}.%i.log.zip"
+         file-name-pattern: "logs/${spring.application.name}.%d{yyyy-mm-dd}.%i.log.zip"
          max-file-size: 10MB
          max-history: 10
    file:
       name: logs/${spring.application.name}.log
    level:
-      root: WARN
+      root: warn
       com:
          poscodx:
             emaillist:
-               exception: ERROR
+               exception: error

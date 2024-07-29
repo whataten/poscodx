@@ -2,89 +2,79 @@ package com.poscodx.kanbanboard.controller;
 
 import java.util.Map;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.http_status;
+import org.springframework.http.response_entity;
+import org.springframework.web.bind.annotation.delete_mapping;
+import org.springframework.web.bind.annotation.get_mapping;
+import org.springframework.web.bind.annotation.path_variable;
+import org.springframework.web.bind.annotation.post_mapping;
+import org.springframework.web.bind.annotation.put_mapping;
+import org.springframework.web.bind.annotation.request_body;
+import org.springframework.web.bind.annotation.request_mapping;
+import org.springframework.web.bind.annotation.request_param;
+import org.springframework.web.bind.annotation.rest_controller;
 
-import com.poscodx.kanbanboard.dto.JsonResult;
-import com.poscodx.kanbanboard.repository.KanbanboardRepository;
-import com.poscodx.kanbanboard.vo.TaskVo;
+import com.poscodx.kanbanboard.dto.json_result;
+import com.poscodx.kanbanboard.repository.kanbanboard_repository;
+import com.poscodx.kanbanboard.vo.task_vo;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RestController
-@RequestMapping("/api")
-public class ApiController {
-	 private final KanbanboardRepository kanbanboardRepository;
+@rest_controller
+@request_mapping("/api")
+public class api_controller {
+	 private final kanbanboard_repository kanbanboard_repository;
 
-	 public ApiController(KanbanboardRepository kanbanboardRepository) {
-        this.kanbanboardRepository = kanbanboardRepository;
+	 public api_controller(kanbanboard_repository kanbanboard_repository) {
+        this.kanbanboard_repository = kanbanboard_repository;
 	 }
 	
-	 // Card API
-    @GetMapping("/cards")
-    public ResponseEntity<JsonResult> getAllCards() {
-        return ResponseEntity
-        		.status(HttpStatus.OK)
-        		.body(JsonResult.success(kanbanboardRepository.findCardAll()));
+	 // Card api
+    @get_mapping("/cards")
+    public response_entity<json_result> get_all_cards() {
+        return response_entity
+        		.status(http_status.ok)
+        		.body(json_result.success(kanbanboard_repository.find_card_all()));
     }
   
-    // Task APIs
-    @GetMapping("/tasks")
-    public ResponseEntity<JsonResult> getTasks(@RequestParam("no") Long no) {
+    // Task ap_is
+    @get_mapping("/tasks")
+    public response_entity<json_result> get_tasks(@request_param("no") Long no) {
         log.info("Tasks for card {}: {}", no);
         
-        return ResponseEntity
-        		.status(HttpStatus.OK)
-        		.body(JsonResult.success(kanbanboardRepository.findTaskAll(no)));				
+        return response_entity
+        		.status(http_status.ok)
+        		.body(json_result.success(kanbanboard_repository.find_task_all(no)));				
     }
 
-    @PostMapping("/tasks")
-    public ResponseEntity<JsonResult> createTask(@RequestBody TaskVo vo) {
+    @post_mapping("/tasks")
+    public response_entity<json_result> create_task(@request_body task_vo vo) {
     	log.info("Request task create by " + vo);
-        kanbanboardRepository.insertTask(vo);
-        return ResponseEntity
-        		.status(HttpStatus.OK)
-        		.body(JsonResult.success(vo));
+        kanbanboard_repository.insert_task(vo);
+        return response_entity
+        		.status(http_status.ok)
+        		.body(json_result.success(vo));
     }
     
-    @PutMapping("/tasks/{no}")
-    public ResponseEntity<JsonResult> updateTask(@PathVariable("no") Long no, @RequestBody TaskVo vo) {
+    @put_mapping("/tasks/{no}")
+    public response_entity<json_result> update_task(@path_variable("no") Long no, @request_body task_vo vo) {
         log.info("Request task update by " + no);
-        kanbanboardRepository.updateTask(no, vo.getDone());
+        kanbanboard_repository.update_task(no, vo.get_done());
         
-        return ResponseEntity
-        		.status(HttpStatus.OK)
-        		.body(JsonResult.success(vo));
+        return response_entity
+        		.status(http_status.ok)
+        		.body(json_result.success(vo));
     }
-    
-//    @PutMapping("/tasks")
-//    public ResponseEntity<JsonResult> updateTask(@RequestBody TaskVo vo) {
-//        //log.info("Request task update by " + no);
-//        kanbanboardRepository.updateTask(vo.getNo(), vo.getDone());
-//        
-//        return ResponseEntity
-//        		.status(HttpStatus.OK)
-//        		.body(JsonResult.success(vo));
-//    }
 
-    @DeleteMapping("/tasks/{no}")
-    public ResponseEntity<JsonResult> deleteTask(@PathVariable("no") Long no) {
+    @delete_mapping("/tasks/{no}")
+    public response_entity<json_result> delete_task(@path_variable("no") Long no) {
     	log.info("Request task Delete by " + no);
     	
-        kanbanboardRepository.deleteTask(no);
+        kanbanboard_repository.delete_task(no);
         
-        return ResponseEntity
-        		.status(HttpStatus.OK)
-        		.body(JsonResult.success(Map.of("no", no)));   
+        return response_entity
+        		.status(http_status.ok)
+        		.body(json_result.success(Map.of("no", no)));   
     }
 }

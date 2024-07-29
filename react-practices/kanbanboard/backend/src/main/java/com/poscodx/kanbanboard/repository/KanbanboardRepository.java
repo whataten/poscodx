@@ -3,44 +3,44 @@ package com.poscodx.kanbanboard.repository;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.sql_session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.poscodx.kanbanboard.vo.CardVo;
-import com.poscodx.kanbanboard.vo.TaskVo;
+import com.poscodx.kanbanboard.vo.card_vo;
+import com.poscodx.kanbanboard.vo.task_vo;
 
 @Repository
-public class KanbanboardRepository {
-	private final SqlSession sqlSession;
+public class kanbanboard_repository {
+	private final sql_session sql_session;
 	
-	public KanbanboardRepository(SqlSession sqlSession) {
-		this.sqlSession = sqlSession;
+	public kanbanboard_repository(sql_session sql_session) {
+		this.sql_session = sql_session;
 	}
 
 	//card read 
-	public List<CardVo> findCardAll() {
-		return sqlSession.selectList("card.findAll");
+	public List<card_vo> find_card_all() {
+		return sql_session.select_list("card.find_all");
 	}
 	
 	//task insert(create)
-	public void insertTask(TaskVo vo) {
-		sqlSession.insert("task.insert", vo);
+	public void insert_task(task_vo vo) {
+		sql_session.insert("task.insert", vo);
 	}
 	
 	//task read 
-	public List<TaskVo> findTaskAll(Long cardNo){
-		return sqlSession.selectList("task.findAll", cardNo);
+	public List<task_vo> find_task_all(Long card_no){
+		return sql_session.select_list("task.find_all", card_no);
 	}
 
 	//task update
-	public int updateTask(Long no, String done) {
-		return sqlSession.update("task.update", Map.of("no", no, "done", done));
+	public int update_task(Long no, String done) {
+		return sql_session.update("task.update", Map.of("no", no, "done", done));
 	}
 	
 	//task delete 
-	public int deleteTask(Long no) {
-		return sqlSession.delete("task.delete", no);
+	public int delete_task(Long no) {
+		return sql_session.delete("task.delete", no);
 	}
 
 }

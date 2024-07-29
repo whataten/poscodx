@@ -1,35 +1,35 @@
 package com.poscodx.kanbanboard.dto;
 
-public class JsonResult {
+public class json_result {
 	private String result;	//"success" or "fail"
 	private Object data;	// if success
 	private String message; // if fail
 	
-	private JsonResult(Object data) {
+	private json_result(Object data) {
 		this.result = "success";
 		this.data = data;
 	}
 
-	private JsonResult(String message) {
+	private json_result(String message) {
 		this.result = "fail";
 		this.message = message;
 	}
 	
-	public String getResult() {
+	public String get_result() {
 		return result;
 	}
-	public Object getData() {
+	public Object get_data() {
 		return data;
 	}
-	public String getMessage() {
+	public String get_message() {
 		return message;
 	}
 
-	public static JsonResult success(Object data) {
-		return new JsonResult(data);
+	public static json_result success(Object data) {
+		return new json_result(data);
 	}
 	
-	public static JsonResult fail(String message) {
-		return new JsonResult(message);
+	public static json_result fail(String message) {
+		return new json_result(message);
 	}
 }

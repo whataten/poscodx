@@ -2,12 +2,12 @@ package com.poscodx.kanbanboard.vo;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
+import lombok.to_string;
 
 @Getter
 @Setter
-@ToString
-public class CardVo {
+@to_string
+public class card_vo {
 	 private Long no;
 	 private String title;
 	 private String description;

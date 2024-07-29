@@ -1,20 +1,20 @@
 package com.poscodx.kanbanboard.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.get_mapping;
+import org.springframework.web.bind.annotation.request_mapping;
+import org.springframework.web.bind.annotation.response_body;
 
 @Controller
-public class LandingController {
+public class landing_controller {
 	
-	@RequestMapping("")
+	@request_mapping("")
 	public String index() {
 		return "index";
 	}
 	
-	@GetMapping("favicon.ico")
-	@ResponseBody
-	public void returnNoFavivon() {
+	@get_mapping("favicon.ico")
+	@response_body
+	public void return_no_favivon() {
 	}
 }
